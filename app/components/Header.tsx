@@ -101,23 +101,23 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
               alignItems: 'center',
               gap: isMobile ? '1rem' : '1.5rem'
             }}>
-              <Link href="/analise" style={{ textDecoration: 'none' }}>
+              <Link href="/assessment" style={{ textDecoration: 'none' }}>
                 <button style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: isMobile ? '0.4rem' : '0.5rem',
                   padding: isMobile ? '0.5rem 1rem' : '0.6rem 1.2rem',
-                  background: isActivePage('/analise') ? 'linear-gradient(135deg, #22c55e, #16a34a)' : 'transparent',
-                  color: isActivePage('/analise') ? 'white' : '#6b7280',
-                  border: isActivePage('/analise') ? 'none' : '1px solid #e5e7eb',
+                  background: isActivePage('/assessment') ? 'linear-gradient(135deg, #22c55e, #16a34a)' : 'transparent',
+                  color: isActivePage('/assessment') ? 'white' : '#6b7280',
+                  border: isActivePage('/assessment') ? 'none' : '1px solid #e5e7eb',
                   borderRadius: '20px',
                   cursor: 'pointer',
                   fontSize: isMobile ? '0.8rem' : '0.9rem',
-                  fontWeight: isActivePage('/analise') ? 600 : 500,
+                  fontWeight: isActivePage('/assessment') ? 600 : 500,
                   transition: 'all 0.3s ease'
                 }}>
                   <span>🧠</span>
-                  <span>AI Analysis</span>
+                  <span>Health Assessment</span>
                 </button>
               </Link>
 
@@ -137,27 +137,27 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
                   transition: 'all 0.3s ease'
                 }}>
                   <span>🛍️</span>
-                  <span>Products</span>
+                  <span>Smart Search</span>
                 </button>
               </Link>
 
-              <Link href="/avaliacao" style={{ textDecoration: 'none' }}>
+              <Link href="/plan" style={{ textDecoration: 'none' }}>
                 <button style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: isMobile ? '0.4rem' : '0.5rem',
                   padding: isMobile ? '0.5rem 1rem' : '0.6rem 1.2rem',
-                  background: isActivePage('/avaliacao') ? 'linear-gradient(135deg, #8b5cf6, #7c3aed)' : 'transparent',
-                  color: isActivePage('/avaliacao') ? 'white' : '#6b7280',
-                  border: isActivePage('/avaliacao') ? 'none' : '1px solid #e5e7eb',
+                  background: isActivePage('/plan') ? 'linear-gradient(135deg, #8b5cf6, #7c3aed)' : 'transparent',
+                  color: isActivePage('/plan') ? 'white' : '#6b7280',
+                  border: isActivePage('/plan') ? 'none' : '1px solid #e5e7eb',
                   borderRadius: '20px',
                   cursor: 'pointer',
                   fontSize: isMobile ? '0.8rem' : '0.9rem',
-                  fontWeight: isActivePage('/avaliacao') ? 600 : 500,
+                  fontWeight: isActivePage('/plan') ? 600 : 500,
                   transition: 'all 0.3s ease'
                 }}>
-                  <span>🎯</span>
-                  <span>Assessment</span>
+                  <span>📋</span>
+                  <span>30-Day Plan</span>
                 </button>
               </Link>
             </div>

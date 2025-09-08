@@ -75,22 +75,22 @@ const content = {
   // Estatísticas
   stats: {
     pt: [
-      { number: '2.847', label: 'Brasileiros Atendidos' },
+      { number: '15.000', label: 'Pessoas Atendidas' },
       { number: '4.9/5', label: 'Avaliação Média' },
-      { number: '$2M+', label: 'Economizado pelos Usuários' },
-      { number: '1.243', label: 'Avaliações 5 Estrelas' }
+      { number: '$12M+', label: 'Economizado pelos Usuários' },
+      { number: '8.500', label: 'Avaliações 5 Estrelas' }
     ],
     es: [
-      { number: '8.500', label: 'Latinos Atendidos' },
+      { number: '18.500', label: 'Latinos Atendidos' },
       { number: '4.8/5', label: 'Calificación Promedio' },
-      { number: '$5M+', label: 'Ahorrado por Usuarios' },
-      { number: '3.200', label: 'Reseñas 5 Estrellas' }
+      { number: '$15M+', label: 'Ahorrado por Usuarios' },
+      { number: '9.200', label: 'Reseñas 5 Estrellas' }
     ],
     en: [
-      { number: '12.000', label: 'People Served' },
+      { number: '25.000', label: 'Americans Served' },
       { number: '4.9/5', label: 'Average Rating' },
-      { number: '$8M+', label: 'Saved by Users' },
-      { number: '4.800', label: '5-Star Reviews' }
+      { number: '$20M+', label: 'Saved by Users' },
+      { number: '12.800', label: '5-Star Reviews' }
     ]
   },
   
@@ -258,7 +258,7 @@ export default function HomePage() {
               margin: '0 auto 1rem'
             }}>
               {/* 1. ANÁLISE IA - VERDE SUAVE */}
-              <Link href="/analise" style={{ textDecoration: 'none' }}>
+              <Link href="/assessment" style={{ textDecoration: 'none' }}>
                 <div style={{
                   background: 'linear-gradient(135deg, #10b981, #059669)',
                   borderRadius: '25px',
@@ -860,7 +860,7 @@ export default function HomePage() {
             </p>
             
             <div style={{ marginBottom: '1rem' }}>
-              <Link href="/analise" style={{ textDecoration: 'none' }}>
+              <Link href="/assessment" style={{ textDecoration: 'none' }}>
                 <button style={{
                   display: 'inline-flex',
                   alignItems: 'center',
