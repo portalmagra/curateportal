@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Header from '../components/Header'
 
 export default function LinkExtractorPage() {
-  const [language, setLanguage] = useState<'pt' | 'es' | 'en'>('pt')
+  const [language, setLanguage] = useState<'en' | 'es'>('en')
   const [amazonUrl, setAmazonUrl] = useState('')
   const [processedUrl, setProcessedUrl] = useState('')
   const [myPortalUrl, setMyPortalUrl] = useState('')
