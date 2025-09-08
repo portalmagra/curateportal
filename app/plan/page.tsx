@@ -28,34 +28,89 @@ type Product = {
 }
 
 const translations = {
-  pageTitle: { en: 'Your Personalized Wellness Plan', es: 'Tu Plan de Bienestar Personalizado' },
+  pageTitle: { 
+    en: 'Your Personalized Wellness Plan', 
+    es: 'Tu Plan de Bienestar Personalizado',
+    pt: 'Seu Plano de Bem-estar Personalizado'
+  },
   heroTitle: { 
     en: 'Your AI-Generated\nWellness Plan', 
-    es: 'Tu Plan de Bienestar\nGenerado por IA'
+    es: 'Tu Plan de Bienestar\nGenerado por IA',
+    pt: 'Seu Plano de Bem-estar\nGerado por IA'
   },
   heroSubtitle: { 
     en: 'Based on your assessment, here\'s your personalized 30-day wellness plan', 
-    es: 'Basado en tu evaluación, aquí está tu plan de bienestar personalizado de 30 días'
+    es: 'Basado en tu evaluación, aquí está tu plan de bienestar personalizado de 30 días',
+    pt: 'Baseado na sua avaliação, aqui está seu plano de bem-estar personalizado de 30 dias'
   },
   
-  analysisTitle: { en: 'AI Health Analysis', es: 'Análisis de Salud con IA' },
-  recommendationsTitle: { en: 'Personalized Recommendations', es: 'Recomendaciones Personalizadas' },
-  productsTitle: { en: 'Curated Amazon Products', es: 'Productos Amazon Curados' },
-  timelineTitle: { en: '30-Day Implementation Timeline', es: 'Cronograma de Implementación de 30 Días' },
+  analysisTitle: { 
+    en: 'AI Health Analysis', 
+    es: 'Análisis de Salud con IA',
+    pt: 'Análise de Saúde com IA'
+  },
+  recommendationsTitle: { 
+    en: 'Personalized Recommendations', 
+    es: 'Recomendaciones Personalizadas',
+    pt: 'Recomendações Personalizadas'
+  },
+  productsTitle: { 
+    en: 'Curated Amazon Products', 
+    es: 'Productos Amazon Curados',
+    pt: 'Produtos Amazon Curados'
+  },
+  timelineTitle: { 
+    en: '30-Day Implementation Timeline', 
+    es: 'Cronograma de Implementación de 30 Días',
+    pt: 'Cronograma de Implementação de 30 Dias'
+  },
   
-  week1: { en: 'Week 1: Foundation', es: 'Semana 1: Fundación' },
-  week2: { en: 'Week 2: Building', es: 'Semana 2: Construcción' },
-  week3: { en: 'Week 3: Optimization', es: 'Semana 3: Optimización' },
-  week4: { en: 'Week 4: Mastery', es: 'Semana 4: Maestría' },
+  week1: { 
+    en: 'Week 1: Foundation', 
+    es: 'Semana 1: Fundación',
+    pt: 'Semana 1: Fundação'
+  },
+  week2: { 
+    en: 'Week 2: Building', 
+    es: 'Semana 2: Construcción',
+    pt: 'Semana 2: Construção'
+  },
+  week3: { 
+    en: 'Week 3: Optimization', 
+    es: 'Semana 3: Optimización',
+    pt: 'Semana 3: Otimização'
+  },
+  week4: { 
+    en: 'Week 4: Mastery', 
+    es: 'Semana 4: Maestría',
+    pt: 'Semana 4: Maestria'
+  },
   
-  getStartedButton: { en: 'Get Started Today', es: 'Comenzar Hoy' },
-  downloadPlanButton: { en: 'Download Plan', es: 'Descargar Plan' },
-  shareButton: { en: 'Share Results', es: 'Compartir Resultados' },
+  getStartedButton: { 
+    en: 'Get Started Today', 
+    es: 'Comenzar Hoy',
+    pt: 'Começar Hoje'
+  },
+  downloadPlanButton: { 
+    en: 'Download Plan', 
+    es: 'Descargar Plan',
+    pt: 'Baixar Plano'
+  },
+  shareButton: { 
+    en: 'Share Results', 
+    es: 'Compartir Resultados',
+    pt: 'Compartilhar Resultados'
+  },
   
-  footerTagline: { en: 'Your personalized wellness portal', es: 'Tu portal personalizado de bienestar' },
+  footerTagline: { 
+    en: 'Your personalized wellness portal', 
+    es: 'Tu portal personalizado de bienestar',
+    pt: 'Seu portal personalizado de bem-estar'
+  },
   footerCopyright: { 
     en: '© 2025 CuratePortal LLC. All rights reserved.',
-    es: '© 2025 CuratePortal LLC. Todos los derechos reservados.'
+    es: '© 2025 CuratePortal LLC. Todos los derechos reservados.',
+    pt: '© 2025 CuratePortal LLC. Todos os direitos reservados.'
   }
 }
 
