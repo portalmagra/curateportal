@@ -206,6 +206,16 @@ export default function ProdutosPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #3b82f6 0%, #1e40af 100%)' }}>
+        <style jsx>{`
+          .search-input::placeholder {
+            color: #6b7280 !important;
+            opacity: 1 !important;
+            font-weight: 400 !important;
+          }
+          .search-input:focus::placeholder {
+            color: #9ca3af !important;
+          }
+        `}</style>
         <Header language={language} onLanguageChange={setLanguage} />
 
           <div style={{
@@ -244,15 +254,16 @@ export default function ProdutosPage() {
           </p>
           
             <div style={{
-            background: 'rgba(255, 255, 255, 0.1)',
+            background: 'rgba(255, 255, 255, 0.95)',
             borderRadius: '50px',
             padding: '0.5rem',
             backdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
+            border: '2px solid rgba(249, 115, 22, 0.3)',
             maxWidth: '600px',
             margin: '0 auto',
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)'
             }}>
               <input
                 type="text"
@@ -267,8 +278,10 @@ export default function ProdutosPage() {
                 outline: 'none',
                 padding: '1rem 1.5rem',
                 fontSize: '1.1rem',
-                color: 'white'
+                color: '#1f2937',
+                fontWeight: '500'
                 }}
+                className="search-input"
               />
               <button
               onClick={handleSearch}
