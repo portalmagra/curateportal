@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    serverComponentsExternalPackages: ['openai']
-  },
+  serverExternalPackages: ['openai'],
   webpack: (config, { isServer }) => {
     if (isServer) {
       config.externals.push('openai')
