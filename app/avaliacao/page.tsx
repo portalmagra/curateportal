@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../components/Header'
 
-type Language = 'pt' | 'es' | 'en'
+type Language = 'en' | 'es'
 
 const content = {
   // Headers e Títulos
@@ -142,7 +142,7 @@ const content = {
 }
 
 export default function SuportePage() {
-  const [language, setLanguage] = useState<Language>('pt')
+  const [language, setLanguage] = useState<Language>('en')
   const [formData, setFormData] = useState({
     name: '',
     goal: ''
