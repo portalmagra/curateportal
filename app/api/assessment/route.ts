@@ -41,10 +41,10 @@ function generateAnalysis(answers: any, language: string) {
   // Generate personalized analysis based on responses
   let analysis = {
     summary: '',
-    recommendations: [],
-    priorityAreas: [],
-    riskFactors: [],
-    nextSteps: []
+    recommendations: [] as string[],
+    priorityAreas: [] as string[],
+    riskFactors: [] as string[],
+    nextSteps: [] as string[]
   }
   
   if (language === 'en') {
