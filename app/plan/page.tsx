@@ -19,6 +19,14 @@ type UserData = {
   budget: string
 }
 
+type Product = {
+  name: string
+  price: string
+  rating: number
+  link: string
+  asin: string
+}
+
 const translations = {
   pageTitle: { en: 'Your Personalized Wellness Plan', es: 'Tu Plan de Bienestar Personalizado' },
   heroTitle: { 
@@ -55,7 +63,7 @@ export default function PlanPage() {
   const [language, setLanguage] = useState<Language>('en')
   const [analysis, setAnalysis] = useState('')
   const [recommendations, setRecommendations] = useState('')
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
   
   const t = (key: keyof typeof translations) => translations[key]?.[language] || translations[key]?.en || key
