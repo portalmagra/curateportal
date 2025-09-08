@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '../components/Header'
 
-type Language = 'en' | 'es'
+type Language = 'pt' | 'es' | 'en'
 
 type UserData = {
   age: number
@@ -163,7 +163,7 @@ export default function PlanPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#f8fafc' }}>
-      <Header language={language} setLanguage={setLanguage} />
+      <Header language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
       <section style={{
