@@ -450,220 +450,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Como Funciona Section - COMPACTADO */}
-        <section style={{
-          background: '#f8fafc',
-          padding: '2rem 0',
-          textAlign: 'center'
-        }}>
-          <div style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '0 2rem'
-          }}>
-            <h2 style={{
-              fontSize: 'clamp(1.5rem, 4vw, 2rem)',
-              fontWeight: 900,
-              marginBottom: '1.5rem',
-              color: '#1f2937'
-            }}>
-              <span className="gradient-text">How It Works</span> - Your Wellness Journey
-            </h2>
-            
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '1rem',
-              marginBottom: '1.5rem'
-            }}>
-                              {/* Passo 1 */}
-                <div style={{
-                  background: 'white',
-                  borderRadius: '20px',
-                  padding: '1.5rem 1.5rem',
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
-                  border: '2px solid #e0f2e9',
-                  position: 'relative'
-                }}>
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '1rem',
-                  marginBottom: '1rem'
-                }}>
-                  <div style={{
-                    width: '40px',
-                    height: '40px',
-                    background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.2rem',
-                    fontWeight: 900,
-                    color: 'white',
-                    flexShrink: 0
-                  }}>
-                    1
-                  </div>
-                  <h3 style={{
-                    fontSize: '1.3rem',
-                    fontWeight: 700,
-                    marginBottom: '0',
-                    color: '#1f2937'
-                  }}>
-                    AI Health Assessment
-                  </h3>
-                </div>
-                <p style={{
-                  fontSize: '1rem',
-                  color: '#6b7280',
-                  lineHeight: 1.6
-                }}>
-                  Our AI analyzes your health goals, energy levels, and challenges to provide personalized recommendations.
-                </p>
-              </div>
-
-              {/* Passo 2 */}
-              <div style={{
-                background: 'white',
-                borderRadius: '20px',
-                padding: '2.5rem 2rem',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
-                border: '2px solid #e0f2e9',
-                position: 'relative'
-              }}>
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '1rem',
-                  marginBottom: '1rem'
-                }}>
-                  <div style={{
-                    width: '40px',
-                    height: '40px',
-                    background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.2rem',
-                    fontWeight: 900,
-                    color: 'white',
-                    flexShrink: 0
-                  }}>
-                    2
-                  </div>
-                  <h3 style={{
-                    fontSize: '1.3rem',
-                    fontWeight: 700,
-                    marginBottom: '0',
-                    color: '#1f2937'
-                  }}>
-                    Curated Amazon Products
-                  </h3>
-                </div>
-                <p style={{
-                  fontSize: '1rem',
-                  color: '#6b7280',
-                  lineHeight: 1.6
-                }}>
-                  We curate the best Amazon products for your specific needs - quality, safety, and value guaranteed.
-                </p>
-              </div>
-
-              {/* Passo 3 */}
-              <div style={{
-                background: 'white',
-                borderRadius: '20px',
-                padding: '2.5rem 2rem',
-                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
-                border: '2px solid #e0f2e9',
-                position: 'relative'
-              }}>
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '1rem',
-                  marginBottom: '1rem'
-                }}>
-                  <div style={{
-                    width: '40px',
-                    height: '40px',
-                    background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    fontSize: '1.2rem',
-                    fontWeight: 900,
-                    color: 'white',
-                    flexShrink: 0
-                  }}>
-                    3
-                  </div>
-                  <h3 style={{
-                    fontSize: '1.3rem',
-                    fontWeight: 700,
-                    marginBottom: '0',
-                    color: '#1f2937'
-                  }}>
-                    30-Day Wellness Plan
-                  </h3>
-                </div>
-                <p style={{
-                  fontSize: '1rem',
-                  color: '#6b7280',
-                  lineHeight: 1.6
-                }}>
-                  Get a comprehensive 30-day nutrition and wellness plan tailored specifically to your health goals and lifestyle.
-                </p>
-              </div>
-            </div>
-
-            {/* CTA para Avaliação */}
-            <div style={{
-              background: 'linear-gradient(135deg, #fef3c7, #fde68a)',
-              borderRadius: '20px',
-              padding: '2rem',
-              border: '2px solid #f59e0b',
-              marginTop: '2rem'
-            }}>
-              <h3 style={{
-                fontSize: '1.5rem',
-                fontWeight: 700,
-                marginBottom: '1rem',
-                color: '#92400e'
-              }}>
-                🎯 Ready to Start Your Wellness Journey?
-              </h3>
-              <p style={{
-                fontSize: '1.1rem',
-                color: '#92400e',
-                marginBottom: '1.5rem',
-                lineHeight: 1.5
-              }}>
-                <strong>Get your personalized wellness plan in minutes!</strong> Our AI-powered assessment identifies exactly what you need to achieve your health goals.
-              </p>
-              <Link href="/assessment" style={{ textDecoration: 'none' }}>
-                <button style={{
-                  background: 'linear-gradient(135deg, #f59e0b, #d97706)',
-                  color: 'white',
-                  padding: '1rem 2rem',
-                  border: 'none',
-                  borderRadius: '50px',
-                  fontSize: '1.1rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 8px 25px rgba(245, 158, 11, 0.3)'
-                }}>
-                  🚀 START MY ASSESSMENT NOW
-                </button>
-              </Link>
-            </div>
-          </div>
-        </section>
 
         {/* Testimonials */}
         <section style={{ background: '#f9fafb', padding: '5rem 0' }}>
@@ -826,8 +612,8 @@ export default function HomePage() {
 
         {/* Como Funciona a Análise IA */}
         <section style={{
-          background: 'linear-gradient(135deg, #22c55e, #16a34a)',
-          color: 'white',
+          background: 'linear-gradient(135deg, #f0fdf4, #ecfdf5)',
+          color: '#1f2937',
           padding: '3rem 0',
           textAlign: 'center'
         }}>
@@ -860,8 +646,8 @@ export default function HomePage() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  background: 'white',
-                  color: '#22c55e',
+                  background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+                  color: 'white',
                   fontSize: '1rem',
                   fontWeight: 700,
                   padding: '1rem 2rem',
@@ -869,7 +655,7 @@ export default function HomePage() {
                   borderRadius: '50px',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
-                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)'
+                  boxShadow: '0 8px 25px rgba(34, 197, 94, 0.3)'
                 }}>
                   <span>🚀</span>
                   Start AI Analysis
@@ -884,17 +670,17 @@ export default function HomePage() {
               flexWrap: 'wrap',
               marginTop: '1.5rem'
             }}>
-              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>✅ 100% Free</span>
-              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>⚡ 2-3 Minutes</span>
-              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>🔒 Secure Data</span>
+              <span style={{ fontSize: '0.9rem', color: '#6b7280' }}>✅ 100% Free</span>
+              <span style={{ fontSize: '0.9rem', color: '#6b7280' }}>⚡ 2-3 Minutes</span>
+              <span style={{ fontSize: '0.9rem', color: '#6b7280' }}>🔒 Secure Data</span>
             </div>
           </div>
         </section>
 
         {/* Como Funciona os Produtos */}
         <section style={{
-          background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
-          color: 'white',
+          background: 'linear-gradient(135deg, #eff6ff, #dbeafe)',
+          color: '#1f2937',
           padding: '3rem 0',
           textAlign: 'center'
         }}>
@@ -970,8 +756,8 @@ export default function HomePage() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  background: 'white',
-                  color: '#3b82f6',
+                  background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+                  color: 'white',
                   fontSize: '1rem',
                   fontWeight: 700,
                   padding: '1rem 2rem',
@@ -979,7 +765,7 @@ export default function HomePage() {
                   borderRadius: '50px',
                   cursor: 'pointer',
                   transition: 'all 0.3s ease',
-                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)'
+                  boxShadow: '0 8px 25px rgba(59, 130, 246, 0.3)'
                 }}>
                   <span>🔍</span>
                   View Selected Products
