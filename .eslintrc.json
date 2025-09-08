@@ -14,7 +14,11 @@
     "node": true,
     "jest": true
   },
+  "globals": {
+    "React": "readonly"
+  },
   "rules": {
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "no-unreachable": "off"
   }
 }
