@@ -174,9 +174,8 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
               <div style={{ display: 'flex', gap: isMobile ? '0.2rem' : '0.3rem' }}>
                 {[
                   { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/assessment' },
-                  { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/es/analise' },
-                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' },
-                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/pt/analise' }
+                  { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/assessment' },
+                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/assessment' }
                 ].map(lang => (
                   <Link key={lang.code} href={lang.href} style={{ textDecoration: 'none' }}>
                     <button
@@ -338,9 +337,8 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
               }}>
                 {[
                   { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/assessment' },
-                  { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/es/analise' },
-                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' },
-                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/pt/analise' }
+                  { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/assessment' },
+                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/assessment' }
                 ].map(lang => (
                   <Link key={lang.code} href={lang.href} style={{ textDecoration: 'none' }}>
                     <button

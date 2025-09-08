@@ -294,7 +294,7 @@ export default function HomePage() {
                       fontWeight: 900,
                       marginBottom: '0',
                       textShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                    }}>Análise Inteligente</h2>
+                    }}>Health Assessment</h2>
                   </div>
                   <p style={{
                     fontSize: '1rem',
@@ -302,7 +302,7 @@ export default function HomePage() {
                     lineHeight: 1.5,
                     marginBottom: '1.5rem'
                   }}>
-                    Perguntas simples que direcionam seu bem-estar. Gratuito e personalizado.
+                    Simple questions that guide your wellness. Free and personalized.
                   </p>
                   <div style={{
                     background: 'rgba(255, 255, 255, 0.2)',
@@ -312,7 +312,7 @@ export default function HomePage() {
                     fontWeight: 700,
                     backdropFilter: 'blur(10px)'
                   }}>
-                    🚀 COMEÇAR AGORA
+                    🚀 START NOW
                   </div>
                 </div>
               </Link>
@@ -354,7 +354,7 @@ export default function HomePage() {
                       fontWeight: 900,
                       marginBottom: '0',
                       textShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                    }}>Produtos Selecionados</h2>
+                    }}>Smart Amazon Search</h2>
                   </div>
                   <p style={{
                     fontSize: '1rem',
@@ -362,7 +362,7 @@ export default function HomePage() {
                     lineHeight: 1.5,
                     marginBottom: '1.5rem'
                   }}>
-                    Suas melhores escolhas - qualidade e preço. Sem gastar nada por isso.
+                    Your best choices - quality and price. Without spending anything for it.
                   </p>
                   <div style={{
                     background: 'rgba(255, 255, 255, 0.2)',
@@ -372,13 +372,13 @@ export default function HomePage() {
                     fontWeight: 700,
                     backdropFilter: 'blur(10px)'
                   }}>
-                    🔍 VER PRODUTOS
+                    🔍 VIEW PRODUCTS
                   </div>
                 </div>
               </Link>
 
               {/* 3. AVALIAÇÃO - ROXO SUAVE */}
-              <Link href="/avaliacao" style={{ textDecoration: 'none' }}>
+              <Link href="/plan" style={{ textDecoration: 'none' }}>
                 <div style={{
                   background: 'linear-gradient(135deg, #7c3aed, #6d28d9)',
                   borderRadius: '25px',
@@ -408,13 +408,13 @@ export default function HomePage() {
                     <div style={{
                       fontSize: '2rem',
                       filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))'
-                    }}>💬</div>
+                    }}>📋</div>
                     <h2 style={{
                       fontSize: '1.4rem',
                       fontWeight: 900,
                       marginBottom: '0',
                       textShadow: '0 2px 4px rgba(0,0,0,0.2)'
-                    }}>Avaliação Personalizada</h2>
+                    }}>30-Day Wellness Plan</h2>
                   </div>
                   <p style={{
                     fontSize: '1rem',
@@ -422,7 +422,7 @@ export default function HomePage() {
                     lineHeight: 1.5,
                     marginBottom: '1.5rem'
                   }}>
-                    Contato humano por vídeo. Avaliação completa personalizada.
+                    AI-generated 30-day nutrition plan. Personalized and scientific.
                   </p>
                   <div style={{
                     background: 'rgba(255, 255, 255, 0.2)',
@@ -432,7 +432,7 @@ export default function HomePage() {
                     fontWeight: 700,
                     backdropFilter: 'blur(10px)'
                   }}>
-                    📞 AGENDAR CONSULTA
+                    📋 VIEW PLAN
                   </div>
                 </div>
               </Link>

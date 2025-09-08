@@ -5,33 +5,32 @@ export default function Footer() {
 
   const footerSections = [
     {
-      title: 'Navegação',
+      title: 'Navigation',
       links: [
-        { name: '🏠 Início', href: '/' },
-        { name: '🔍 Busca Inteligente', href: '/amazon' },
-        { name: '🧠 Avaliação IA', href: '/analise' },
-        { name: '🛍️ Produtos por Área', href: '/produtos' },
-        { name: '🎯 Avaliação', href: '/avaliacao' },
+        { name: '🏠 Home', href: '/' },
+        { name: '🧠 Health Assessment', href: '/assessment' },
+        { name: '🛍️ Smart Search', href: '/produtos' },
+        { name: '📋 30-Day Plan', href: '/plan' },
       ]
     },
     {
-      title: 'Categorias de Produtos',
+      title: 'Wellness Categories',
       links: [
-        { name: '💪 Energia & Performance', href: '/produtos/energia' },
-        { name: '🌙 Sono & Relaxamento', href: '/produtos/sono' },
-        { name: '🛡️ Imunidade', href: '/produtos/imunidade' },
-        { name: '⚖️ Balance Hormonal', href: '/produtos/hormonal' },
-        { name: '🔥 Emagrecimento', href: '/produtos/emagrecimento' },
-        { name: '💝 Afrodisíaco', href: '/produtos/afrodisiaco' },
+        { name: '⚡ Energy & Focus', href: '/produtos/energia' },
+        { name: '🌙 Sleep Quality', href: '/produtos/sono' },
+        { name: '🛡️ Immune Support', href: '/produtos/imunidade' },
+        { name: '⚖️ Hormonal Balance', href: '/produtos/hormonal' },
+        { name: '🔥 Weight Management', href: '/produtos/emagrecimento' },
+        { name: '💝 Sexual Wellness', href: '/produtos/afrodisiaco' },
       ]
     },
     {
-      title: 'Avaliação',
+      title: 'Support',
       links: [
-        { name: '📞 Agendar Consulta', href: '/avaliacao' },
-        { name: '❓ FAQ', href: '/avaliacao#faq' },
-        { name: '📧 Contato', href: '/avaliacao#contato' },
-        { name: '🔒 Privacidade', href: '/privacidade' },
+        { name: '❓ FAQ', href: '/faq' },
+        { name: '📧 Contact', href: '/contact' },
+        { name: '🔒 Privacy Policy', href: '/privacy' },
+        { name: '📋 Terms of Service', href: '/terms' },
       ]
     }
   ]
@@ -54,75 +53,29 @@ export default function Footer() {
           gap: '2rem',
           marginBottom: '2rem'
         }}>
-          {/* Brand Section */}
-          <div>
-            <Link href="/" style={{ textDecoration: 'none' }}>
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1rem' }}>
-                <div style={{
-                  width: '40px',
-                  height: '40px',
-                  background: 'linear-gradient(135deg, #22c55e, #3b82f6)',
-                  borderRadius: '8px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginRight: '12px'
-                }}>
-                  <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>M</span>
-                </div>
-                <span style={{
-                  fontSize: '24px',
-                  fontWeight: 'bold',
-                  background: 'linear-gradient(135deg, #22c55e, #3b82f6)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
-                }}>
-                  MeuPortalFit
-                </span>
-              </div>
-            </Link>
-            <p style={{
-              color: '#9ca3af',
-              fontSize: '14px',
-              lineHeight: '1.6',
-              marginBottom: '1rem'
-            }}>
-              Seu portal personalizado para wellness, criado especificamente para brasileiros nos EUA. 
-              Descubra produtos Amazon personalizados com análise de IA.
-            </p>
-            <div style={{ display: 'flex', gap: '1rem' }}>
-              <a href="#" style={{ color: '#9ca3af', fontSize: '24px' }}>📘</a>
-              <a href="#" style={{ color: '#9ca3af', fontSize: '24px' }}>📷</a>
-              <a href="#" style={{ color: '#9ca3af', fontSize: '24px' }}>💬</a>
-            </div>
-          </div>
-
-          {/* Navigation Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
+          {footerSections.map((section, index) => (
+            <div key={index}>
               <h3 style={{
-                color: '#d1d5db',
-                fontSize: '14px',
+                fontSize: '1.1rem',
                 fontWeight: '600',
-                textTransform: 'uppercase',
                 marginBottom: '1rem',
-                letterSpacing: '0.05em'
+                color: '#f9fafb'
               }}>
                 {section.title}
               </h3>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                {section.links.map((link) => (
-                  <li key={link.name} style={{ marginBottom: '0.75rem' }}>
-                    <Link 
-                      href={link.href}
-                      style={{
-                        color: '#9ca3af',
-                        textDecoration: 'none',
-                        fontSize: '14px',
-                        transition: 'color 0.2s'
-                      }}
-                    >
+              <ul style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0
+              }}>
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex} style={{ marginBottom: '0.5rem' }}>
+                    <Link href={link.href} style={{
+                      color: '#d1d5db',
+                      textDecoration: 'none',
+                      fontSize: '0.9rem',
+                      transition: 'color 0.2s ease'
+                    }}>
                       {link.name}
                     </Link>
                   </li>
@@ -132,33 +85,94 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom Section */}
+        {/* Brand Section */}
         <div style={{
           borderTop: '1px solid #374151',
-          paddingTop: '2rem'
+          paddingTop: '2rem',
+          textAlign: 'center'
         }}>
           <div style={{
             display: 'flex',
-            flexDirection: 'column',
-            gap: '1rem',
             alignItems: 'center',
-            textAlign: 'center'
+            justifyContent: 'center',
+            gap: '0.5rem',
+            marginBottom: '1rem'
           }}>
-            <div style={{ color: '#9ca3af', fontSize: '14px' }}>
-              © {currentYear} Portal Solutions LLC. Todos os direitos reservados.
+            <div style={{
+              width: '40px',
+              height: '40px',
+              background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+              borderRadius: '10px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              color: 'white'
+            }}>
+              C
             </div>
-            <div style={{ display: 'flex', gap: '1.5rem', fontSize: '14px' }}>
-              <Link href="/termos" style={{ color: '#9ca3af', textDecoration: 'none' }}>
-                Termos de Uso
-              </Link>
-              <Link href="/privacidade" style={{ color: '#9ca3af', textDecoration: 'none' }}>
-                Política de Privacidade
-              </Link>
-              <Link href="/cookies" style={{ color: '#9ca3af', textDecoration: 'none' }}>
-                Cookies
-              </Link>
-            </div>
+            <h2 style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              margin: 0,
+              color: '#f9fafb'
+            }}>
+              CuratePortal
+            </h2>
           </div>
+          
+          <p style={{
+            color: '#9ca3af',
+            fontSize: '0.9rem',
+            marginBottom: '1rem',
+            maxWidth: '600px',
+            margin: '0 auto 1rem'
+          }}>
+            Your personalized wellness portal. AI-powered health assessments, curated Amazon products, and 30-day nutrition plans designed for Americans.
+          </p>
+
+          {/* Social Links */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '1rem',
+            marginBottom: '1rem'
+          }}>
+            <a href="#" style={{
+              color: '#9ca3af',
+              fontSize: '1.5rem',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease'
+            }}>
+              📧
+            </a>
+            <a href="#" style={{
+              color: '#9ca3af',
+              fontSize: '1.5rem',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease'
+            }}>
+              📱
+            </a>
+            <a href="#" style={{
+              color: '#9ca3af',
+              fontSize: '1.5rem',
+              textDecoration: 'none',
+              transition: 'color 0.2s ease'
+            }}>
+              💬
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <p style={{
+            color: '#6b7280',
+            fontSize: '0.8rem',
+            margin: 0
+          }}>
+            © {currentYear} CuratePortal LLC. All rights reserved. Made for Americans, by Americans.
+          </p>
         </div>
       </div>
     </footer>
