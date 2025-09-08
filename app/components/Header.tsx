@@ -70,7 +70,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
               <div style={{
                 width: isMobile ? '36px' : '40px',
                 height: isMobile ? '36px' : '40px',
-                background: 'linear-gradient(135deg, #22c55e, #3b82f6)',
+                background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
                 borderRadius: '8px',
                 display: 'flex',
                 alignItems: 'center',
@@ -79,17 +79,17 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                 fontWeight: 900,
                 fontSize: isMobile ? '1.1rem' : '1.2rem'
               }}>
-                M
+                C
               </div>
               <span style={{
                 fontSize: isMobile ? '1.3rem' : '1.5rem',
                 fontWeight: 900,
-                background: 'linear-gradient(135deg, #22c55e, #3b82f6)',
+                background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
               }}>
-                MeuPortalFit
+                CuratePortal
               </span>
             </div>
           </Link>
@@ -117,7 +117,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                   transition: 'all 0.3s ease'
                 }}>
                   <span>🧠</span>
-                  <span>Análise IA</span>
+                  <span>AI Analysis</span>
                 </button>
               </Link>
 
@@ -137,7 +137,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                   transition: 'all 0.3s ease'
                 }}>
                   <span>🛍️</span>
-                  <span>Produtos</span>
+                  <span>Products</span>
                 </button>
               </Link>
 
@@ -157,7 +157,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                   transition: 'all 0.3s ease'
                 }}>
                   <span>🎯</span>
-                  <span>Avaliação</span>
+                  <span>Assessment</span>
                 </button>
               </Link>
             </div>
@@ -268,7 +268,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                 fontWeight: isActivePage('/analise') ? 600 : 500
               }}>
                 <span>🧠</span>
-                <span>Análise IA</span>
+                <span>AI Analysis</span>
               </button>
             </Link>
 
@@ -289,7 +289,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                 fontWeight: isActivePage('/produtos') ? 600 : 500
               }}>
                 <span>🛍️</span>
-                <span>Produtos</span>
+                <span>Products</span>
               </button>
             </Link>
 
@@ -310,7 +310,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                 fontWeight: isActivePage('/avaliacao') ? 600 : 500
               }}>
                 <span>🎯</span>
-                <span>Avaliação</span>
+                <span>Assessment</span>
               </button>
             </Link>
 

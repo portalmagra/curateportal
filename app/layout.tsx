@@ -3,36 +3,36 @@ import './globals.css'
 import ConditionalFooter from './components/ConditionalFooter'
 
 export const metadata = {
-  title: 'MeuPortalFit - Portal de Wellness para Brasileiros nos EUA',
-  description: 'Descubra produtos Amazon personalizados para suas necessidades de saúde e bem-estar. Análise IA gratuita, produtos por área e suporte personalizado.',
-  keywords: 'wellness, saúde, suplementos, Amazon, brasileiros EUA, IA, análise personalizada',
+  title: 'CuratePortal - AI-Powered Health Product Curation',
+  description: 'Discover personalized Amazon products for your health and wellness needs. Free AI analysis, curated products, and 30-day nutrition plans.',
+  keywords: 'wellness, health, supplements, Amazon, AI, personalized analysis, nutrition, fitness',
   
   // Open Graph / Facebook / WhatsApp
   openGraph: {
-    title: 'MeuPortalFit - Portal de Wellness para Brasileiros nos EUA',
-    description: 'Descubra produtos Amazon personalizados para suas necessidades de saúde e bem-estar. Análise IA gratuita, produtos por área e suporte personalizado.',
-    url: 'https://meuportalfit.com',
-    siteName: 'MeuPortalFit',
+    title: 'CuratePortal - AI-Powered Health Product Curation',
+    description: 'Discover personalized Amazon products for your health and wellness needs. Free AI analysis, curated products, and 30-day nutrition plans.',
+    url: 'https://curateportal.com',
+    siteName: 'CuratePortal',
     images: [
       {
-        url: 'https://meuportalfit.com/images/og/meuportalfit-og.jpg',
+        url: 'https://curateportal.com/images/og/curateportal-og.jpg',
         width: 1200,
         height: 630,
-        alt: 'MeuPortalFit - Portal de Wellness para Brasileiros nos EUA',
+        alt: 'CuratePortal - AI-Powered Health Product Curation',
       },
     ],
-    locale: 'pt_BR',
+    locale: 'en_US',
     type: 'website',
   },
   
   // Twitter Cards
   twitter: {
     card: 'summary_large_image',
-    title: 'MeuPortalFit - Portal de Wellness para Brasileiros nos EUA',
-    description: 'Descubra produtos Amazon personalizados para suas necessidades de saúde e bem-estar.',
-    images: ['https://meuportalfit.com/images/og/meuportalfit-og.jpg'],
-    creator: '@meuportalfit',
-    site: '@meuportalfit',
+    title: 'CuratePortal - AI-Powered Health Product Curation',
+    description: 'Discover personalized Amazon products for your health and wellness needs.',
+    images: ['https://curateportal.com/images/og/curateportal-og.jpg'],
+    creator: '@curateportal',
+    site: '@curateportal',
   },
   
   // Meta tags adicionais para WhatsApp
@@ -40,14 +40,14 @@ export const metadata = {
     'og:image:width': '1200',
     'og:image:height': '630',
     'og:image:type': 'image/jpeg',
-    'og:image:alt': 'MeuPortalFit - Portal de Wellness para Brasileiros nos EUA',
+    'og:image:alt': 'CuratePortal - AI-Powered Health Product Curation',
     
     // WhatsApp específico
-    'og:image:secure_url': 'https://meuportalfit.com/images/og/meuportalfit-og.jpg',
+    'og:image:secure_url': 'https://curateportal.com/images/og/curateportal-og.jpg',
     
     // Informações da empresa
-    'og:site_name': 'MeuPortalFit',
-    'og:locale': 'pt_BR',
+    'og:site_name': 'CuratePortal',
+    'og:locale': 'en_US',
     'og:type': 'website',
     
     // Informações de contato

@@ -7,31 +7,31 @@ import Header from './components/Header'
 type Language = 'pt' | 'es' | 'en'
 
 const content = {
-  headline1: { pt: 'Compre Certo e Economize', es: 'Compra Bien y Ahorra', en: 'Buy Right and Save' },
-  headline2: { pt: 'Descubra os Produtos', es: 'Descubre los Productos', en: 'Discover the Products' },
-  headline3: { pt: 'Ideais para Você nos EUA', es: 'Ideales para Ti en USA', en: 'Ideal for You in the USA' },
-  selectLanguage: { pt: 'Escolha seu idioma:', es: 'Elige tu idioma:', en: 'Choose your language:' },
-  trustText: { pt: '+2.847 brasileiros confiam no MeuPortalFit', es: '+2.847 brasileños confían en MeuPortalFit', en: '+2.847 Brazilians trust MeuPortalFit' },
+  headline1: { pt: 'Buy Right and Save', es: 'Compra Bien y Ahorra', en: 'Buy Right and Save' },
+  headline2: { pt: 'Discover the Products', es: 'Descubre los Productos', en: 'Discover the Products' },
+  headline3: { pt: 'Perfect for Your Health', es: 'Perfecto para tu Salud', en: 'Perfect for Your Health' },
+  selectLanguage: { pt: 'Choose your language:', es: 'Elige tu idioma:', en: 'Choose your language:' },
+  trustText: { pt: '+5,000+ Americans trust CuratePortal', es: '+5,000+ Americanos confían en CuratePortal', en: '+5,000+ Americans trust CuratePortal' },
   
   // Seção "Como Funciona"
-  howItWorksTitle: { pt: 'Agende sua Avaliação de Bem-Estar', es: 'Agenda tu Evaluación de Bienestar', en: 'Schedule Your Wellness Assessment' },
-  step1Title: { pt: 'Análise Inteligente', es: 'Análisis Inteligente', en: 'Intelligent Analysis' },
+  howItWorksTitle: { pt: 'Get Your Personalized Health Plan', es: 'Obtén tu Plan de Salud Personalizado', en: 'Get Your Personalized Health Plan' },
+  step1Title: { pt: 'AI Analysis', es: 'Análisis con IA', en: 'AI Analysis' },
   step1Desc: { 
-    pt: 'Perguntas simples que direcionam seu bem-estar. Gratuito e personalizado.',
+    pt: 'Simple questions that guide your wellness. Free and personalized.',
     es: 'Preguntas simples que dirigen tu bienestar. Gratis y personalizado.',
     en: 'Simple questions that guide your wellness. Free and personalized.'
   },
-  step2Title: { pt: 'Produtos Selecionados', es: 'Productos Seleccionados', en: 'Selected Products' },
+  step2Title: { pt: 'Curated Products', es: 'Productos Curados', en: 'Curated Products' },
   step2Desc: { 
-    pt: 'Suas melhores escolhas - qualidade e preço. Sem gastar nada por isso.',
+    pt: 'Your best choices - quality and price. Without spending anything for it.',
     es: 'Tus mejores opciones - calidad y precio. Sin gastar nada por esto.',
     en: 'Your best choices - quality and price. Without spending anything for it.'
   },
-  step3Title: { pt: 'Avaliação Personalizada', es: 'Evaluación Personalizada', en: 'Personalized Assessment' },
+  step3Title: { pt: '30-Day Nutrition Plan', es: 'Plan de Nutrición de 30 Días', en: '30-Day Nutrition Plan' },
   step3Desc: { 
-    pt: 'Contato humano por vídeo. Avaliação completa personalizada.',
-    es: 'Contacto humano por video. Evaluación completa personalizada.',
-    en: 'Human contact by video. Complete personalized assessment.'
+    pt: 'AI-generated 30-day nutrition plan. Personalized and scientific.',
+    es: 'Plan de nutrición de 30 días generado por IA. Personalizado y científico.',
+    en: 'AI-generated 30-day nutrition plan. Personalized and scientific.'
   },
   
   // Seção de Depoimentos
