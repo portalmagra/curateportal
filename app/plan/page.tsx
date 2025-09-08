@@ -474,67 +474,88 @@ export default function PlanPage() {
             </div>
           </section>
 
-          {/* CTA Section */}
+          {/* Plan Promotion Section */}
           <section style={{
-            background: 'linear-gradient(135deg, #fef3c7, #fde68a)',
+            background: 'linear-gradient(135deg, #1f2937, #374151)',
             borderRadius: '20px',
-            padding: '2rem',
+            padding: '3rem',
             textAlign: 'center',
-            border: '2px solid #f59e0b'
+            color: 'white',
+            marginBottom: '2rem'
           }}>
-            <h3 style={{
-              fontSize: '1.5rem',
-              fontWeight: 700,
+            <h2 style={{
+              fontSize: '2.5rem',
+              fontWeight: 900,
               marginBottom: '1rem',
-              color: '#92400e'
+              color: 'white'
             }}>
-              🎯 {language === 'en' ? 'Ready to Transform Your Health?' : '¿Listo para Transformar tu Salud?'}
-            </h3>
+              {language === 'en' ? 'Get Your Complete 30-Day Plan' : 'Obtén tu Plan Completo de 30 Días'}
+            </h2>
             <p style={{
-              fontSize: '1.1rem',
-              color: '#92400e',
-              marginBottom: '1.5rem',
-              lineHeight: 1.5
+              fontSize: '1.2rem',
+              marginBottom: '2rem',
+              color: '#d1d5db',
+              lineHeight: 1.6,
+              maxWidth: '600px',
+              margin: '0 auto 2rem'
             }}>
               {language === 'en' 
-                ? 'Get your complete personalized 30-day wellness plan with daily guidance, progress tracking, and expert support.'
-                : 'Obtén tu plan completo de bienestar personalizado de 30 días con orientación diaria, seguimiento de progreso y soporte experto.'
+                ? 'Unlock your full potential with a detailed, personalized wellness plan designed specifically for you'
+                : 'Desbloquea tu potencial completo con un plan de bienestar detallado y personalizado diseñado específicamente para ti'
               }
             </p>
-            <div style={{
-              display: 'flex',
-              gap: '1rem',
-              justifyContent: 'center',
-              flexWrap: 'wrap'
-            }}>
-              <button style={{
-                background: 'linear-gradient(135deg, #f59e0b, #d97706)',
-                color: 'white',
-                padding: '1rem 2rem',
-                border: 'none',
-                borderRadius: '50px',
-                fontSize: '1.1rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 8px 25px rgba(245, 158, 11, 0.3)'
-              }}>
-                🚀 {language === 'en' ? 'Get My Plan' : 'Obtener Mi Plan'}
-              </button>
-              <button style={{
-                background: 'white',
-                color: '#92400e',
-                padding: '1rem 2rem',
-                border: '2px solid #f59e0b',
-                borderRadius: '50px',
-                fontSize: '1.1rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}>
-                📱 {language === 'en' ? 'Download App' : 'Descargar App'}
-              </button>
+            
+            <div style={{ marginBottom: '2rem' }}>
+              <div style={{ fontSize: '4rem', fontWeight: 'bold', color: '#10b981', marginBottom: '0.5rem' }}>
+                {language === 'en' ? 'Only $37' : 'Solo $37'}
+              </div>
+              <div style={{ fontSize: '1.3rem', color: '#9ca3af', textDecoration: 'line-through', marginBottom: '0.5rem' }}>
+                {language === 'en' ? 'Value: $197' : 'Valor: $197'}
+              </div>
+              <div style={{ fontSize: '1.2rem', color: '#fbbf24', fontWeight: 'bold' }}>
+                {language === 'en' ? 'Save $160' : 'Ahorra $160'}
+              </div>
             </div>
+            
+            <div style={{ marginBottom: '2rem' }}>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'white' }}>
+                {language === 'en' ? 'What\'s Included:' : 'Qué está incluido:'}
+              </h3>
+              <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left', maxWidth: '400px', margin: '0 auto' }}>
+                {[
+                  language === 'en' ? 'Daily personalized recommendations' : 'Recomendaciones personalizadas diarias',
+                  language === 'en' ? 'Detailed supplement protocols' : 'Protocolos detallados de suplementos',
+                  language === 'en' ? 'Lifestyle optimization tips' : 'Consejos de optimización del estilo de vida',
+                  language === 'en' ? 'Progress tracking system' : 'Sistema de seguimiento del progreso',
+                  language === 'en' ? '24/7 support access' : 'Acceso a soporte 24/7'
+                ].map((feature, index) => (
+                  <li key={index} style={{ 
+                    padding: '0.5rem 0', 
+                    color: '#d1d5db',
+                    display: 'flex',
+                    alignItems: 'center'
+                  }}>
+                    <span style={{ color: '#10b981', marginRight: '0.75rem' }}>✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <button style={{
+              padding: '1.2rem 2.5rem',
+              border: 'none',
+              borderRadius: '12px',
+              background: 'linear-gradient(135deg, #10b981, #059669)',
+              color: 'white',
+              cursor: 'pointer',
+              fontSize: '1.2rem',
+              fontWeight: 'bold',
+              boxShadow: '0 4px 14px rgba(16, 185, 129, 0.3)',
+              transition: 'all 0.2s'
+            }}>
+              🚀 {language === 'en' ? 'Get My 30-Day Plan' : 'Obtener Mi Plan de 30 Días'}
+            </button>
           </section>
         </div>
       )}

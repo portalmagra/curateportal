@@ -55,8 +55,8 @@ export const metadata = {
     
     // SEO adicional
     'robots': 'index, follow',
-    'author': 'MeuPortalFit',
-    'copyright': '© 2025 MeuPortalFit. Todos os direitos reservados.',
+    'author': 'CuratePortal',
+    'copyright': '© 2025 CuratePortal LLC. All rights reserved.',
   },
   
   // Manifest para PWA

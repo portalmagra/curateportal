@@ -804,7 +804,7 @@ export default function HomePage() {
               fontWeight: 900,
               marginBottom: '0.5rem'
             }}>
-              MeuPortalFit
+              CuratePortal
             </div>
             <p style={{ color: '#9ca3af', marginBottom: '1rem', fontSize: '0.9rem' }}>
               {t('footerTagline')}

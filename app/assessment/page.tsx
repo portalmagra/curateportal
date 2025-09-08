@@ -40,6 +40,31 @@ const translations = {
     pt: 'Qual é seu maior desafio de saúde?'
   },
   question4: { 
+    en: 'How often do you experience stress or anxiety?', 
+    es: '¿Con qué frecuencia experimentas estrés o ansiedad?',
+    pt: 'Com que frequência você experimenta estresse ou ansiedade?'
+  },
+  question5: { 
+    en: 'How would you rate your sleep quality?', 
+    es: '¿Cómo calificarías la calidad de tu sueño?',
+    pt: 'Como você classificaria a qualidade do seu sono?'
+  },
+  question6: { 
+    en: 'Do you currently take any supplements or medications?', 
+    es: '¿Actualmente tomas algún suplemento o medicamento?',
+    pt: 'Você atualmente toma algum suplemento ou medicamento?'
+  },
+  question7: { 
+    en: 'What is your biggest concern about your health?', 
+    es: '¿Cuál es tu mayor preocupación sobre tu salud?',
+    pt: 'Qual é sua maior preocupação sobre sua saúde?'
+  },
+  question8: { 
+    en: 'How important is it for you to have a personalized health plan?', 
+    es: '¿Qué tan importante es para ti tener un plan de salud personalizado?',
+    pt: 'Quão importante é para você ter um plano de saúde personalizado?'
+  },
+  question9: { 
     en: 'Tell us more about your specific needs:', 
     es: 'Cuéntanos más sobre tus necesidades específicas:',
     pt: 'Conte-nos mais sobre suas necessidades específicas:'
@@ -60,6 +85,31 @@ const translations = {
     en: ['Lack of Energy', 'Poor Sleep', 'Stress & Anxiety', 'Digestive Issues', 'Weight Management', 'Immune System'],
     es: ['Falta de Energía', 'Sueño Pobre', 'Estrés y Ansiedad', 'Problemas Digestivos', 'Control de Peso', 'Sistema Inmune'],
     pt: ['Falta de Energia', 'Sono Ruim', 'Estresse e Ansiedade', 'Problemas Digestivos', 'Controle de Peso', 'Sistema Imune']
+  },
+  stressFrequency: {
+    en: ['Daily', 'Several times a week', 'Weekly', 'Occasionally', 'Rarely'],
+    es: ['Diariamente', 'Varias veces por semana', 'Semanalmente', 'Ocasionalmente', 'Raramente'],
+    pt: ['Diariamente', 'Várias vezes por semana', 'Semanalmente', 'Ocasionalmente', 'Raramente']
+  },
+  sleepQuality: {
+    en: ['Poor - Wake up tired', 'Fair - Some rest', 'Good - Well rested', 'Excellent - Energized'],
+    es: ['Pobre - Me despierto cansado', 'Regular - Algo de descanso', 'Bueno - Bien descansado', 'Excelente - Energizado'],
+    pt: ['Ruim - Acordo cansado', 'Regular - Algum descanso', 'Bom - Bem descansado', 'Excelente - Energizado']
+  },
+  supplements: {
+    en: ['Yes, multiple supplements', 'Yes, 1-2 supplements', 'No, but interested', 'No, not interested'],
+    es: ['Sí, múltiples suplementos', 'Sí, 1-2 suplementos', 'No, pero interesado', 'No, no interesado'],
+    pt: ['Sim, múltiplos suplementos', 'Sim, 1-2 suplementos', 'Não, mas interessado', 'Não, não interessado']
+  },
+  healthConcerns: {
+    en: ['Long-term health', 'Immediate symptoms', 'Prevention', 'Performance', 'Aging', 'Chronic conditions'],
+    es: ['Salud a largo plazo', 'Síntomas inmediatos', 'Prevención', 'Rendimiento', 'Envejecimiento', 'Condiciones crónicas'],
+    pt: ['Saúde a longo prazo', 'Sintomas imediatos', 'Prevenção', 'Performance', 'Envelhecimento', 'Condições crônicas']
+  },
+  planImportance: {
+    en: ['Very Important', 'Important', 'Somewhat Important', 'Not Important'],
+    es: ['Muy Importante', 'Importante', 'Algo Importante', 'No Importante'],
+    pt: ['Muito Importante', 'Importante', 'Um Pouco Importante', 'Não Importante']
   },
   
   // Buttons
@@ -101,6 +151,11 @@ export default function AssessmentPage() {
     goal: '',
     energy: '',
     challenge: '',
+    stress: '',
+    sleep: '',
+    supplements: '',
+    concern: '',
+    planImportance: '',
     additionalInfo: ''
   })
   const [loading, setLoading] = useState(false)
@@ -112,7 +167,7 @@ export default function AssessmentPage() {
   }
   
   const nextStep = () => {
-    if (currentStep < 4) {
+    if (currentStep < 9) {
       setCurrentStep(currentStep + 1)
     }
   }
@@ -126,12 +181,41 @@ export default function AssessmentPage() {
   const submitAssessment = async () => {
     setLoading(true)
     
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // Send assessment data to API
+      const response = await fetch('/api/assessment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          answers,
+          language
+        })
+      })
+      
+      if (response.ok) {
+        const data = await response.json()
+        // Store answers in localStorage for results page
+        localStorage.setItem('assessmentAnswers', JSON.stringify(answers))
+        localStorage.setItem('assessmentLanguage', language)
+        // Redirect to results page with assessment ID
+        window.location.href = `/results?assessmentId=${data.assessmentId}`
+      } else {
+        // Fallback: store answers and redirect to results
+        localStorage.setItem('assessmentAnswers', JSON.stringify(answers))
+        localStorage.setItem('assessmentLanguage', language)
+        window.location.href = '/results'
+      }
+    } catch (error) {
+      console.error('Assessment submission error:', error)
+      // Fallback: store answers and redirect to results
+      localStorage.setItem('assessmentAnswers', JSON.stringify(answers))
+      localStorage.setItem('assessmentLanguage', language)
+      window.location.href = '/results'
+    } finally {
       setLoading(false)
-      // Redirect to results page
-      window.location.href = '/plan'
-    }, 2000)
+    }
   }
   
   const renderQuestion = () => {
@@ -226,6 +310,146 @@ export default function AssessmentPage() {
             <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#1f2937' }}>
               {t('question4')}
             </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {translations.stressFrequency[language].map((level, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer('stress', level)}
+                  style={{
+                    padding: '1rem',
+                    border: answers.stress === level ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+                    borderRadius: '12px',
+                    background: answers.stress === level ? '#eff6ff' : 'white',
+                    color: answers.stress === level ? '#1d4ed8' : '#374151',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  {level}
+                </button>
+              ))}
+            </div>
+          </div>
+        )
+      
+      case 5:
+        return (
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#1f2937' }}>
+              {t('question5')}
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {translations.sleepQuality[language].map((quality, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer('sleep', quality)}
+                  style={{
+                    padding: '1rem',
+                    border: answers.sleep === quality ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+                    borderRadius: '12px',
+                    background: answers.sleep === quality ? '#eff6ff' : 'white',
+                    color: answers.sleep === quality ? '#1d4ed8' : '#374151',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  {quality}
+                </button>
+              ))}
+            </div>
+          </div>
+        )
+      
+      case 6:
+        return (
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#1f2937' }}>
+              {t('question6')}
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {translations.supplements[language].map((option, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer('supplements', option)}
+                  style={{
+                    padding: '1rem',
+                    border: answers.supplements === option ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+                    borderRadius: '12px',
+                    background: answers.supplements === option ? '#eff6ff' : 'white',
+                    color: answers.supplements === option ? '#1d4ed8' : '#374151',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </div>
+        )
+      
+      case 7:
+        return (
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#1f2937' }}>
+              {t('question7')}
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem' }}>
+              {translations.healthConcerns[language].map((concern, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer('concern', concern)}
+                  style={{
+                    padding: '1rem',
+                    border: answers.concern === concern ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+                    borderRadius: '12px',
+                    background: answers.concern === concern ? '#eff6ff' : 'white',
+                    color: answers.concern === concern ? '#1d4ed8' : '#374151',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  {concern}
+                </button>
+              ))}
+            </div>
+          </div>
+        )
+      
+      case 8:
+        return (
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#1f2937' }}>
+              {t('question8')}
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {translations.planImportance[language].map((importance, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleAnswer('planImportance', importance)}
+                  style={{
+                    padding: '1rem',
+                    border: answers.planImportance === importance ? '2px solid #3b82f6' : '1px solid #e5e7eb',
+                    borderRadius: '12px',
+                    background: answers.planImportance === importance ? '#eff6ff' : 'white',
+                    color: answers.planImportance === importance ? '#1d4ed8' : '#374151',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  {importance}
+                </button>
+              ))}
+            </div>
+          </div>
+        )
+      
+      case 9:
+        return (
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: '#1f2937' }}>
+              {t('question9')}
+            </h2>
             <textarea
               value={answers.additionalInfo}
               onChange={(e) => handleAnswer('additionalInfo', e.target.value)}
@@ -297,7 +521,7 @@ export default function AssessmentPage() {
         {/* Progress Bar */}
         <div style={{ maxWidth: '600px', margin: '0 auto 3rem', background: '#f3f4f6', borderRadius: '10px', padding: '4px' }}>
           <div style={{ 
-            width: `${(currentStep / 4) * 100}%`, 
+            width: `${(currentStep / 9) * 100}%`, 
             height: '8px', 
             background: 'linear-gradient(135deg, #3b82f6, #1d4ed8)', 
             borderRadius: '6px',
@@ -329,10 +553,19 @@ export default function AssessmentPage() {
           
           <div style={{ flex: 1 }}></div>
           
-          {currentStep < 4 ? (
+          {currentStep < 9 ? (
             <button
               onClick={nextStep}
-              disabled={!answers.goal && currentStep === 1 || !answers.energy && currentStep === 2 || !answers.challenge && currentStep === 3}
+              disabled={
+                (currentStep === 1 && !answers.goal) ||
+                (currentStep === 2 && !answers.energy) ||
+                (currentStep === 3 && !answers.challenge) ||
+                (currentStep === 4 && !answers.stress) ||
+                (currentStep === 5 && !answers.sleep) ||
+                (currentStep === 6 && !answers.supplements) ||
+                (currentStep === 7 && !answers.concern) ||
+                (currentStep === 8 && !answers.planImportance)
+              }
               style={{
                 padding: '0.75rem 1.5rem',
                 border: 'none',
@@ -341,7 +574,16 @@ export default function AssessmentPage() {
                 color: 'white',
                 cursor: 'pointer',
                 fontSize: '1rem',
-                opacity: (!answers.goal && currentStep === 1 || !answers.energy && currentStep === 2 || !answers.challenge && currentStep === 3) ? 0.5 : 1
+                opacity: (
+                  (currentStep === 1 && !answers.goal) ||
+                  (currentStep === 2 && !answers.energy) ||
+                  (currentStep === 3 && !answers.challenge) ||
+                  (currentStep === 4 && !answers.stress) ||
+                  (currentStep === 5 && !answers.sleep) ||
+                  (currentStep === 6 && !answers.supplements) ||
+                  (currentStep === 7 && !answers.concern) ||
+                  (currentStep === 8 && !answers.planImportance)
+                ) ? 0.5 : 1
               }}
             >
               {t('nextButton')}

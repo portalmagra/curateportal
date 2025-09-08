@@ -1,7 +1,7 @@
 {
-  "name": "MeuPortalFit",
-  "short_name": "MeuPortalFit",
-  "description": "Portal de produtos de saúde e bem-estar",
+  "name": "CuratePortal",
+  "short_name": "CuratePortal",
+  "description": "AI-powered health product curation for Americans",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -3,7 +3,7 @@ import * as crypto from 'crypto';
 // === Amazon Product Advertising API v5 Configuration ===
 const AWS_ACCESS_KEY = process.env.AMAZON_ACCESS_KEY_ID!;
 const AWS_SECRET_KEY = process.env.AMAZON_SECRET_ACCESS_KEY!;
-const ASSOCIATE_TAG = 'portalsolutio-20';
+const ASSOCIATE_TAG = process.env.AMAZON_ASSOCIATE_TAG || 'portalsolutio-20';
 const AWS_REGION = 'us-east-1';
 const SERVICE = 'ProductAdvertisingAPI';
 const HOST = 'webservices.amazon.com';
