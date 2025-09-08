@@ -15,7 +15,7 @@ interface Product {
   reason: string
 }
 
-export default function SmartSearchPage() {
+export default function ProdutosPage() {
   const [language, setLanguage] = useState<'en' | 'es' | 'pt'>('en')
   const [searchTerm, setSearchTerm] = useState('')
   const [products, setProducts] = useState<Product[]>([])
