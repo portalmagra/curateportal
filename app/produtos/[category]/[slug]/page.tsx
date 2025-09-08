@@ -13,7 +13,7 @@ interface ProductPageProps {
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
-  const [language, setLanguage] = useState<'en' | 'es'>('en')
+  const [language, setLanguage] = useState<'en' | 'es' | 'pt'>('en')
   const [product, setProduct] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)

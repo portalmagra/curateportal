@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '../components/Header'
 
-type Language = 'en' | 'es'
+type Language = 'en' | 'es' | 'pt'
 
 type UserData = {
   age: number
