@@ -9,13 +9,14 @@ type Language = 'en' | 'es'
 type UserData = {
   age: number
   gender: string
-  healthGoals: string[]
-  currentSupplements: string[]
-  dietaryRestrictions: string[]
-  activityLevel: string
-  sleepQuality: string
+  goals: string[]
+  currentRoutine: string
+  sleepHours: number
   stressLevel: string
-  additionalInfo?: string
+  diet: string
+  exercise: string
+  supplements: string
+  budget: string
 }
 
 const translations = {
