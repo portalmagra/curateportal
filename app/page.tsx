@@ -105,7 +105,10 @@ const content = {
 
 export default function HomePage() {
   const [language, setLanguage] = useState<Language>('pt')
-  const t = (key: keyof typeof content) => content[key]?.[language] || content[key]?.pt || key
+  const t = (key: keyof typeof content): string => {
+    const value = content[key]?.[language] || content[key]?.en || key
+    return typeof value === 'string' ? value : String(value)
+  }
 
   return (
     <>
