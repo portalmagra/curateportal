@@ -205,12 +205,12 @@ export default function SmartSearchPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-      <Header language={language} onLanguageChange={setLanguage} />
-      
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(135deg, #3b82f6 0%, #1e40af 100%)' }}>
+        <Header language={language} onLanguageChange={setLanguage} />
+
+          <div style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
         padding: '2rem',
         minHeight: 'calc(100vh - 80px)',
         display: 'flex',
@@ -222,17 +222,17 @@ export default function SmartSearchPage() {
           textAlign: 'center',
           marginBottom: '3rem',
           color: 'white'
-        }}>
-          <h1 style={{
+          }}>
+            <h1 style={{
             fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-            fontWeight: 900,
+              fontWeight: 900,
             marginBottom: '1rem',
             textShadow: '0 4px 8px rgba(0,0,0,0.3)'
           }}>
-            Smart <span style={{ color: '#fbbf24' }}>Search</span>
-          </h1>
-          
-          <p style={{
+            Smart <span style={{ color: '#f97316' }}>Search</span>
+            </h1>
+
+            <p style={{
             fontSize: '1.2rem',
             marginBottom: '2rem',
             opacity: 0.9,
@@ -243,7 +243,7 @@ export default function SmartSearchPage() {
             Stop wasting time on Amazon. Get curated, quality products in seconds.
           </p>
           
-          <div style={{
+            <div style={{
             background: 'rgba(255, 255, 255, 0.1)',
             borderRadius: '50px',
             padding: '0.5rem',
@@ -253,14 +253,14 @@ export default function SmartSearchPage() {
             margin: '0 auto',
             display: 'flex',
             alignItems: 'center'
-          }}>
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+            }}>
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               onKeyPress={handleKeyPress}
               placeholder="What are you looking for? (e.g., energy supplements, sleep aid)"
-              style={{
+                style={{
                 flex: 1,
                 background: 'transparent',
                 border: 'none',
@@ -268,15 +268,15 @@ export default function SmartSearchPage() {
                 padding: '1rem 1.5rem',
                 fontSize: '1.1rem',
                 color: 'white'
-              }}
-            />
-            <button
+                }}
+              />
+              <button
               onClick={handleSearch}
               disabled={loading || !searchTerm.trim()}
-              style={{
-                background: loading ? '#6b7280' : '#fbbf24',
+                style={{
+                background: loading ? '#6b7280' : '#f97316',
                 color: 'white',
-                border: 'none',
+                  border: 'none',
                 borderRadius: '40px',
                 padding: '1rem 2rem',
                 fontSize: '1rem',
@@ -287,7 +287,7 @@ export default function SmartSearchPage() {
               }}
             >
               {loading ? 'Searching...' : 'Search'}
-            </button>
+              </button>
           </div>
           
           <p style={{
@@ -301,7 +301,7 @@ export default function SmartSearchPage() {
 
         {/* Results Section */}
         {searched && (
-          <div style={{
+            <div style={{
             background: 'rgba(255, 255, 255, 0.95)',
             borderRadius: '20px',
             padding: '2rem',
@@ -337,7 +337,7 @@ export default function SmartSearchPage() {
                     marginBottom: '0.5rem'
                   }}>
                     🎯 Curated Results
-                  </h2>
+              </h2>
                   <p style={{
                     color: '#6b7280',
                     fontSize: '1rem'
@@ -345,9 +345,9 @@ export default function SmartSearchPage() {
                     AI-selected products for "{searchTerm}"
                   </p>
                 </div>
-                
-                <div style={{
-                  display: 'grid',
+
+              <div style={{
+                display: 'grid',
                   gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                   gap: '1.5rem',
                   marginBottom: '2rem'
@@ -377,7 +377,7 @@ export default function SmartSearchPage() {
                         marginBottom: '1rem'
                       }}>
                         <div style={{
-                          background: '#fbbf24',
+                          background: '#f97316',
                           color: 'white',
                           padding: '0.3rem 0.8rem',
                           borderRadius: '20px',
@@ -391,15 +391,15 @@ export default function SmartSearchPage() {
                           alignItems: 'center',
                           gap: '0.3rem'
                         }}>
-                          <span style={{ color: '#fbbf24' }}>⭐</span>
+                          <span style={{ color: '#f97316' }}>⭐</span>
                           <span style={{ fontWeight: 700 }}>{product.rating}</span>
                         </div>
                       </div>
                       
-                      <div style={{
-                        textAlign: 'center',
-                        marginBottom: '1rem'
-                      }}>
+              <div style={{
+                textAlign: 'center',
+                  marginBottom: '1rem'
+                }}>
                         <img
                           src={product.image}
                           alt={product.name}
@@ -410,16 +410,16 @@ export default function SmartSearchPage() {
                             marginBottom: '1rem'
                           }}
                         />
-                        <h3 style={{
-                          fontSize: '1.1rem',
-                          fontWeight: 700,
+                  <h3 style={{
+                    fontSize: '1.1rem',
+                    fontWeight: 700,
                           color: '#1f2937',
-                          marginBottom: '0.5rem'
-                        }}>
+                    marginBottom: '0.5rem'
+                  }}>
                           {product.name}
-                        </h3>
-                        <p style={{
-                          fontSize: '0.9rem',
+                  </h3>
+                  <p style={{
+                    fontSize: '0.9rem',
                           color: '#6b7280',
                           lineHeight: 1.4,
                           marginBottom: '1rem'
@@ -441,21 +441,21 @@ export default function SmartSearchPage() {
                           marginBottom: '0.3rem'
                         }}>
                           Why this?
-                        </p>
-                        <p style={{
-                          fontSize: '0.8rem',
+                  </p>
+                  <p style={{
+                    fontSize: '0.8rem',
                           color: '#6b7280'
-                        }}>
+                  }}>
                           {product.reason}
-                        </p>
-                      </div>
-                      
-                      <div style={{
+                  </p>
+              </div>
+
+                <div style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        marginBottom: '1rem'
-                      }}>
+                    marginBottom: '1rem'
+                  }}>
                         <span style={{
                           fontSize: '1.5rem',
                           fontWeight: 900,
@@ -493,10 +493,10 @@ export default function SmartSearchPage() {
                       >
                         View on Amazon
                       </button>
-                    </div>
+                  </div>
                   ))}
                 </div>
-                
+
                 <div style={{
                   textAlign: 'center',
                   padding: '1.5rem',
@@ -534,7 +534,7 @@ export default function SmartSearchPage() {
             gap: '1.5rem',
             marginTop: '3rem'
           }}>
-            <div style={{
+                  <div style={{
               background: 'rgba(255, 255, 255, 0.1)',
               borderRadius: '15px',
               padding: '2rem',
@@ -545,7 +545,7 @@ export default function SmartSearchPage() {
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🤖</div>
               <h3 style={{
                 fontSize: '1.3rem',
-                fontWeight: 700,
+                      fontWeight: 700,
                 color: 'white',
                 marginBottom: '0.5rem'
               }}>
@@ -557,10 +557,10 @@ export default function SmartSearchPage() {
                 lineHeight: 1.5
               }}>
                 Our AI understands your needs and selects only the best products for you.
-              </p>
-            </div>
+                      </p>
+                    </div>
             
-            <div style={{
+                  <div style={{
               background: 'rgba(255, 255, 255, 0.1)',
               borderRadius: '15px',
               padding: '2rem',
@@ -572,38 +572,38 @@ export default function SmartSearchPage() {
               <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: 700,
-                color: 'white',
+                    color: 'white',
                 marginBottom: '0.5rem'
-              }}>
+                  }}>
                 Save Time
               </h3>
-              <p style={{
+                    <p style={{
                 color: 'rgba(255, 255, 255, 0.8)',
                 fontSize: '0.9rem',
                 lineHeight: 1.5
               }}>
                 Get curated results in seconds instead of hours of research.
-              </p>
-            </div>
-            
-            <div style={{
+                    </p>
+                  </div>
+
+                <div style={{
               background: 'rgba(255, 255, 255, 0.1)',
               borderRadius: '15px',
               padding: '2rem',
-              textAlign: 'center',
+                  textAlign: 'center',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255, 255, 255, 0.2)'
             }}>
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🎯</div>
-              <h3 style={{
+                  <h3 style={{
                 fontSize: '1.3rem',
                 fontWeight: 700,
                 color: 'white',
-                marginBottom: '0.5rem'
-              }}>
+                    marginBottom: '0.5rem'
+                  }}>
                 Quality First
-              </h3>
-              <p style={{
+                  </h3>
+                  <p style={{
                 color: 'rgba(255, 255, 255, 0.8)',
                 fontSize: '0.9rem',
                 lineHeight: 1.5

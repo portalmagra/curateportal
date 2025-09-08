@@ -123,7 +123,7 @@ export default function HomePage() {
         }
         
         .gradient-text {
-          background: linear-gradient(135deg, #22c55e, #3b82f6);
+          background: linear-gradient(135deg, #3b82f6, #1e40af);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -131,7 +131,7 @@ export default function HomePage() {
         }
         
         .stat-number {
-          background: linear-gradient(135deg, #22c55e, #3b82f6);
+          background: linear-gradient(135deg, #3b82f6, #1e40af);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -139,7 +139,7 @@ export default function HomePage() {
         }
         
         .footer-brand {
-          background: linear-gradient(135deg, #22c55e, #3b82f6);
+          background: linear-gradient(135deg, #3b82f6, #1e40af);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -166,7 +166,7 @@ export default function HomePage() {
             width: '150px',
             height: '150px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #22c55e, #3b82f6)',
+            background: 'linear-gradient(135deg, #3b82f6, #1e40af)',
             filter: 'blur(25px)',
             opacity: 0.2,
             animation: 'float 8s ease-in-out infinite',
@@ -179,7 +179,7 @@ export default function HomePage() {
             width: '200px',
             height: '200px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #06b6d4, #8b5cf6)',
+            background: 'linear-gradient(135deg, #f97316, #ea580c)',
             filter: 'blur(25px)',
             opacity: 0.2,
             animation: 'float 8s ease-in-out infinite 2s',
@@ -192,7 +192,7 @@ export default function HomePage() {
             width: '180px',
             height: '180px',
             borderRadius: '50%',
-            background: 'linear-gradient(135deg, #06b6d4, #22c55e)',
+            background: 'linear-gradient(135deg, #3b82f6, #1e40af)',
             filter: 'blur(25px)',
             opacity: 0.2,
             animation: 'float 8s ease-in-out infinite 4s',
@@ -260,12 +260,12 @@ export default function HomePage() {
               {/* 1. ANÁLISE IA - VERDE SUAVE */}
               <Link href="/assessment" style={{ textDecoration: 'none' }}>
                 <div style={{
-                  background: 'linear-gradient(135deg, #10b981, #059669)',
+                  background: 'linear-gradient(135deg, #f97316, #ea580c)',
                   borderRadius: '25px',
                   padding: '1.5rem 1.5rem',
                   textAlign: 'center',
                   color: 'white',
-                  boxShadow: '0 20px 40px rgba(16, 185, 129, 0.25)',
+                  boxShadow: '0 20px 40px rgba(249, 115, 22, 0.25)',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer',
                   border: '3px solid rgba(255, 255, 255, 0.2)',
