@@ -67,6 +67,13 @@ export default function PlanPage() {
   const [loading, setLoading] = useState(true)
   
   const t = (key: keyof typeof translations) => translations[key]?.[language] || translations[key]?.en || key
+  
+  // Wrapper function to convert between Language types
+  const handleLanguageChange = (lang: 'pt' | 'es' | 'en') => {
+    // Convert 'pt' to 'en' since we don't have Portuguese translations
+    const convertedLang = lang === 'pt' ? 'en' : lang as 'en' | 'es'
+    setLanguage(convertedLang)
+  }
 
   useEffect(() => {
     // Simular dados do usuário (em produção viria do assessment)
@@ -163,7 +170,7 @@ export default function PlanPage() {
 
   return (
     <div style={{ minHeight: '100vh', background: '#f8fafc' }}>
-      <Header language={language} onLanguageChange={setLanguage} />
+      <Header language={language} onLanguageChange={handleLanguageChange} />
       
       {/* Hero Section */}
       <section style={{
