@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from './components/Header'
 
-type Language = 'en' | 'es'
+type Language = 'en' | 'es' | 'pt'
 
 const content = {
   headline1: { pt: 'Buy Right and Save', es: 'Compra Bien y Ahorra', en: 'Buy Right and Save' },

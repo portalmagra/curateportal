@@ -69,7 +69,7 @@ export default function PlanPage() {
   const t = (key: keyof typeof translations) => translations[key]?.[language] || translations[key]?.en || key
   
   // Wrapper function to convert between Language types
-  const handleLanguageChange = (lang: 'pt' | 'es' | 'en') => {
+  const handleLanguageChange = (lang: 'en' | 'es' | 'pt') => {
     // Convert 'pt' to 'en' since we don't have Portuguese translations
     const convertedLang = lang === 'pt' ? 'en' : lang as 'en' | 'es'
     setLanguage(convertedLang)

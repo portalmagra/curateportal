@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-type Language = 'en' | 'es'
+type Language = 'en' | 'es' | 'pt'
 
 interface HeaderProps {
   language?: Language
@@ -175,7 +175,8 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
                 {[
                   { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/assessment' },
                   { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/es/analise' },
-                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' }
+                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' },
+                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/pt/analise' }
                 ].map(lang => (
                   <Link key={lang.code} href={lang.href} style={{ textDecoration: 'none' }}>
                     <button
@@ -338,7 +339,8 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
                 {[
                   { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/assessment' },
                   { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/es/analise' },
-                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' }
+                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' },
+                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/pt/analise' }
                 ].map(lang => (
                   <Link key={lang.code} href={lang.href} style={{ textDecoration: 'none' }}>
                     <button

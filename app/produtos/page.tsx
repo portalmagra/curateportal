@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Header from '../components/Header'
 
 export default function ProdutosPage() {
-  const [language, setLanguage] = useState<'pt' | 'es' | 'en'>('pt')
+  const [language, setLanguage] = useState<'en' | 'es' | 'pt'>('en')
   const [searchTerm, setSearchTerm] = useState('')
 
   // Categorias de produtos
