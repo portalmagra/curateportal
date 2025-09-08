@@ -199,7 +199,7 @@ export default function ResultsPage() {
       const analysisResponse = await fetch('/api/assessment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ answers: mockAnswers, language })
+        body: JSON.stringify({ answers, language })
       })
       
       const analysisData = await analysisResponse.json()
@@ -212,7 +212,7 @@ export default function ResultsPage() {
       const productsResponse = await fetch('/api/products', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ answers: mockAnswers, language })
+        body: JSON.stringify({ answers, language })
       })
       
       const productsData = await productsResponse.json()
