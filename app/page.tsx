@@ -474,7 +474,7 @@ export default function HomePage() {
               gap: '1.5rem',
               marginBottom: '3rem'
             }}>
-              {/* Depoimentos dos usuários */}
+              {/* Testimonial 1 */}
               <div style={{
                 background: 'white',
                 borderRadius: '15px',
@@ -488,20 +488,82 @@ export default function HomePage() {
                   lineHeight: 1.6,
                   marginBottom: '1rem'
                 }}>
-                  "Incrível! Encontrei exatamente os suplementos que precisava. A IA acertou em cheio minhas necessidades."
+                  "Amazing! I found exactly the supplements I needed. The AI nailed my health requirements perfectly."
                 </p>
                 <p style={{
                   fontSize: '0.9rem',
                   fontWeight: 700,
                   color: '#1f2937'
                 }}>
-                  Maria Rodriguez
+                  Sarah Johnson
                 </p>
                 <p style={{
                   fontSize: '0.8rem',
                   color: '#6b7280'
                 }}>
-                  Orlando, FL
+                  Austin, TX
+                </p>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div style={{
+                background: 'white',
+                borderRadius: '15px',
+                padding: '2rem',
+                boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
+                textAlign: 'center'
+              }}>
+                <p style={{
+                  fontSize: '1rem',
+                  color: '#4b5563',
+                  lineHeight: 1.6,
+                  marginBottom: '1rem'
+                }}>
+                  "The personalized 30-day plan changed my life. I finally have energy and feel amazing every day!"
+                </p>
+                <p style={{
+                  fontSize: '0.9rem',
+                  fontWeight: 700,
+                  color: '#1f2937'
+                }}>
+                  Michael Chen
+                </p>
+                <p style={{
+                  fontSize: '0.8rem',
+                  color: '#6b7280'
+                }}>
+                  Seattle, WA
+                </p>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div style={{
+                background: 'white',
+                borderRadius: '15px',
+                padding: '2rem',
+                boxShadow: '0 10px 20px rgba(0,0,0,0.1)',
+                textAlign: 'center'
+              }}>
+                <p style={{
+                  fontSize: '1rem',
+                  color: '#4b5563',
+                  lineHeight: 1.6,
+                  marginBottom: '1rem'
+                }}>
+                  "Finally, a platform that understands my health goals. The Amazon recommendations are spot-on!"
+                </p>
+                <p style={{
+                  fontSize: '0.9rem',
+                  fontWeight: 700,
+                  color: '#1f2937'
+                }}>
+                  Emily Rodriguez
+                </p>
+                <p style={{
+                  fontSize: '0.8rem',
+                  color: '#6b7280'
+                }}>
+                  Miami, FL
                 </p>
               </div>
             </div>
