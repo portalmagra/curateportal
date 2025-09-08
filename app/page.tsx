@@ -467,7 +467,7 @@ export default function HomePage() {
               marginBottom: '1.5rem',
               color: '#1f2937'
             }}>
-              <span className="gradient-text">Como Funciona</span> a Avaliação Personalizada
+              <span className="gradient-text">How It Works</span> - Your Wellness Journey
             </h2>
             
             <div style={{
@@ -512,7 +512,7 @@ export default function HomePage() {
                     marginBottom: '0',
                     color: '#1f2937'
                   }}>
-                    Análise da Rotina Alimentar
+                    AI Health Assessment
                   </h3>
                 </div>
                 <p style={{
@@ -520,7 +520,7 @@ export default function HomePage() {
                   color: '#6b7280',
                   lineHeight: 1.6
                 }}>
-                  Investigamos sua alimentação atual, identificando possíveis áreas de melhoria que podem estar impedindo seus resultados.
+                  Our AI analyzes your health goals, energy levels, and challenges to provide personalized recommendations.
                 </p>
               </div>
 
@@ -560,7 +560,7 @@ export default function HomePage() {
                     marginBottom: '0',
                     color: '#1f2937'
                   }}>
-                    Hábitos de Sono e Estresse
+                    Curated Amazon Products
                   </h3>
                 </div>
                 <p style={{
@@ -568,7 +568,7 @@ export default function HomePage() {
                   color: '#6b7280',
                   lineHeight: 1.6
                 }}>
-                  Analisamos seu sono e níveis de estresse, ambos essenciais para o sucesso na desinflamação do corpo e resultados duradouros.
+                  We curate the best Amazon products for your specific needs - quality, safety, and value guaranteed.
                 </p>
               </div>
 
@@ -608,7 +608,7 @@ export default function HomePage() {
                     marginBottom: '0',
                     color: '#1f2937'
                   }}>
-                    Plano Personalizado
+                    30-Day Wellness Plan
                   </h3>
                 </div>
                 <p style={{
@@ -616,7 +616,7 @@ export default function HomePage() {
                   color: '#6b7280',
                   lineHeight: 1.6
                 }}>
-                  Criamos um plano específico para seu caso, identificando todos os fatores que podem estar impactando os resultados que você busca.
+                  Get a comprehensive 30-day nutrition and wellness plan tailored specifically to your health goals and lifestyle.
                 </p>
               </div>
             </div>
@@ -635,7 +635,7 @@ export default function HomePage() {
                 marginBottom: '1rem',
                 color: '#92400e'
               }}>
-                🎯 Pronto para Descobrir o que Está Impedindo Seus Resultados?
+                🎯 Ready to Start Your Wellness Journey?
               </h3>
               <p style={{
                 fontSize: '1.1rem',
@@ -643,14 +643,9 @@ export default function HomePage() {
                 marginBottom: '1.5rem',
                 lineHeight: 1.5
               }}>
-                <strong>30 minutos que podem mudar sua vida para sempre!</strong> Nossa avaliação personalizada identifica exatamente o que você precisa para alcançar seus objetivos.
+                <strong>Get your personalized wellness plan in minutes!</strong> Our AI-powered assessment identifies exactly what you need to achieve your health goals.
               </p>
-              <a 
-                href="https://wa.me/17862535032?text=Olá! Gostaria de agendar minha avaliação personalizada de bem-estar. Pode me ajudar?"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
-              >
+              <Link href="/assessment" style={{ textDecoration: 'none' }}>
                 <button style={{
                   background: 'linear-gradient(135deg, #f59e0b, #d97706)',
                   color: 'white',
@@ -663,9 +658,9 @@ export default function HomePage() {
                   transition: 'all 0.3s ease',
                   boxShadow: '0 8px 25px rgba(245, 158, 11, 0.3)'
                 }}>
-                  🚀 AGENDAR MINHA AVALIAÇÃO AGORA
+                  🚀 START MY ASSESSMENT NOW
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -684,7 +679,7 @@ export default function HomePage() {
               marginBottom: '3rem',
               color: '#1f2937'
             }}>
-              O que nossos <span className="gradient-text">usuários</span> dizem
+              What our <span className="gradient-text">users</span> say
             </h2>
             
             <div style={{
@@ -753,7 +748,7 @@ export default function HomePage() {
                   fontSize: '0.9rem',
                   color: '#6b7280'
                 }}>
-                  Brasileiros Atendidos
+                  Americans Served
                 </p>
               </div>
               
@@ -776,7 +771,7 @@ export default function HomePage() {
                   fontSize: '0.9rem',
                   color: '#6b7280'
                 }}>
-                  Avaliação Média
+                  Average Rating
                 </p>
               </div>
               
@@ -799,7 +794,7 @@ export default function HomePage() {
                   fontSize: '0.9rem',
                   color: '#6b7280'
                 }}>
-                  Economizado pelos Usuários
+                  Saved by Users
                 </p>
               </div>
               
@@ -822,7 +817,7 @@ export default function HomePage() {
                   fontSize: '0.9rem',
                   color: '#6b7280'
                 }}>
-                  Avaliações 5 Estrelas
+                  5-Star Reviews
                 </p>
               </div>
             </div>
@@ -847,7 +842,7 @@ export default function HomePage() {
               marginBottom: '1rem',
               lineHeight: 1.2
             }}>
-              🧠 Como Funciona a Análise Inteligente
+              🧠 How Our AI Analysis Works
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -855,8 +850,8 @@ export default function HomePage() {
               opacity: 0.95,
               lineHeight: 1.5
             }}>
-              Nossa inteligência artificial faz perguntas estratégicas para entender suas necessidades específicas. 
-              Em poucos minutos, você recebe recomendações personalizadas baseadas em sua rotina, objetivos e perfil único.
+              Our artificial intelligence asks strategic questions to understand your specific needs. 
+              In just a few minutes, you receive personalized recommendations based on your routine, goals, and unique profile.
             </p>
             
             <div style={{ marginBottom: '1rem' }}>
@@ -877,7 +872,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)'
                 }}>
                   <span>🚀</span>
-                  Fazer Análise Inteligente
+                  Start AI Analysis
                 </button>
               </Link>
             </div>
@@ -889,9 +884,9 @@ export default function HomePage() {
               flexWrap: 'wrap',
               marginTop: '1.5rem'
             }}>
-              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>✅ 100% Gratuito</span>
-              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>⚡ 2-3 Minutos</span>
-              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>🔒 Dados Seguros</span>
+              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>✅ 100% Free</span>
+              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>⚡ 2-3 Minutes</span>
+              <span style={{ fontSize: '0.9rem', opacity: 0.9 }}>🔒 Secure Data</span>
             </div>
           </div>
         </section>
@@ -914,7 +909,7 @@ export default function HomePage() {
               marginBottom: '1rem',
               lineHeight: 1.2
             }}>
-              🛍️ Como Funciona a Seleção de Produtos
+              🛍️ How Our Smart Product Selection Works
             </h2>
             <p style={{
               fontSize: '1.1rem',
@@ -922,8 +917,8 @@ export default function HomePage() {
               opacity: 0.95,
               lineHeight: 1.5
             }}>
-              Você pode fazer uma busca inteligente direta na Amazon ou escolher produtos pré-selecionados em nossas categorias. 
-              Sempre seguimos nossa filosofia:
+              You can do a smart search directly on Amazon or choose pre-selected products in our categories. 
+              We always follow our philosophy:
             </p>
             
             <div style={{
@@ -945,7 +940,7 @@ export default function HomePage() {
                 fontWeight: 600
               }}>
                 <span style={{ fontSize: '1.2rem' }}>🥇</span>
-                <span><strong>1º Qualidade</strong></span>
+                <span><strong>1st Quality</strong></span>
               </div>
               <div style={{
                 display: 'flex',
@@ -955,7 +950,7 @@ export default function HomePage() {
                 fontWeight: 600
               }}>
                 <span style={{ fontSize: '1.2rem' }}>🏆</span>
-                <span><strong>2º Credibilidade da Marca</strong></span>
+                <span><strong>2nd Brand Credibility</strong></span>
               </div>
               <div style={{
                 display: 'flex',
@@ -965,7 +960,7 @@ export default function HomePage() {
                 fontWeight: 600
               }}>
                 <span style={{ fontSize: '1.2rem' }}>💰</span>
-                <span><strong>3º Melhor Preço</strong></span>
+                <span><strong>3rd Best Price</strong></span>
               </div>
             </div>
             
@@ -987,7 +982,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 25px rgba(0, 0, 0, 0.2)'
                 }}>
                   <span>🔍</span>
-                  Ver Produtos Selecionados
+                  View Selected Products
                 </button>
               </Link>
             </div>
