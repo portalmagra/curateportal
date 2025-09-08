@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+  experimental: {
+    serverComponentsExternalPackages: ['openai']
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      config.externals.push('openai')
+    }
+    return config
+  }
 }
 
 module.exports = nextConfig

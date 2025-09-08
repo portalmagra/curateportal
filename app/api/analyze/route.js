@@ -1,5 +1,3 @@
-import { callAnalysisAssistant } from '@/lib/assistant-config'
-
 export async function POST(request) {
   try {
     const { userData, language = 'en' } = await request.json()
@@ -7,6 +5,9 @@ export async function POST(request) {
     if (!userData) {
       return Response.json({ error: 'User data is required' }, { status: 400 })
     }
+    
+    // Dynamic import to avoid build-time execution
+    const { callAnalysisAssistant } = await import('@/lib/assistant-config')
     
     const result = await callAnalysisAssistant(userData, language)
     
