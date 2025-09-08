@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from './components/Header'
 
-type Language = 'pt' | 'es' | 'en'
+type Language = 'en' | 'es'
 
 const content = {
   headline1: { pt: 'Buy Right and Save', es: 'Compra Bien y Ahorra', en: 'Buy Right and Save' },
@@ -104,7 +104,7 @@ const content = {
 }
 
 export default function HomePage() {
-  const [language, setLanguage] = useState<Language>('pt')
+  const [language, setLanguage] = useState<Language>('en')
   const t = (key: keyof typeof content): string => {
     const value = content[key]?.[language] || content[key]?.en || key
     return typeof value === 'string' ? value : String(value)
