@@ -6,6 +6,18 @@ import Header from '../components/Header'
 
 type Language = 'en' | 'es'
 
+type UserData = {
+  age: number
+  gender: string
+  healthGoals: string[]
+  currentSupplements: string[]
+  dietaryRestrictions: string[]
+  activityLevel: string
+  sleepQuality: string
+  stressLevel: string
+  additionalInfo?: string
+}
+
 const translations = {
   pageTitle: { en: 'Your Personalized Wellness Plan', es: 'Tu Plan de Bienestar Personalizado' },
   heroTitle: { 
@@ -66,7 +78,7 @@ export default function PlanPage() {
     callAnalysisAPI(userData)
   }, [language])
   
-  const callAnalysisAPI = async (userData) => {
+  const callAnalysisAPI = async (userData: UserData) => {
     try {
       setLoading(true)
       
