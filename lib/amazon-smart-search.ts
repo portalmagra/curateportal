@@ -210,7 +210,7 @@ export async function searchAmazonProductsSmart(
           console.log(`✅ Encontrados ${newProducts.length} produtos únicos`);
         }
       } catch (error) {
-        console.warn(`⚠️ Erro na busca: ${error.message}`);
+        console.warn(`⚠️ Erro na busca:`, error instanceof Error ? error.message : String(error));
       }
     }
     
@@ -234,7 +234,7 @@ export async function searchAmazonProductsSmart(
             console.log(`✅ Encontrados ${newProducts.length} produtos alternativos`);
           }
         } catch (error) {
-          console.warn(`⚠️ Erro na busca alternativa: ${error.message}`);
+          console.warn(`⚠️ Erro na busca alternativa:`, error instanceof Error ? error.message : String(error));
         }
       }
     }
@@ -271,7 +271,7 @@ export async function searchAmazonProductsSmart(
           finalProducts.push(...newProducts.slice(0, maxResults - finalProducts.length));
         }
       } catch (error) {
-        console.warn(`⚠️ Erro na busca genérica: ${error.message}`);
+        console.warn(`⚠️ Erro na busca genérica:`, error instanceof Error ? error.message : String(error));
       }
     }
   }
