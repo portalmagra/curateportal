@@ -22,7 +22,7 @@ interface Product {
 }
 
 export default function AnsiedadePage() {
-  const [language, setLanguage] = useState<'pt' | 'es' | 'en'>('pt')
+  const [language, setLanguage] = useState<'en' | 'es'>('en')
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -98,6 +98,7 @@ export default function AnsiedadePage() {
       }
     } catch (error) {
       console.log('❌ BroadcastChannel não suportado na página ansiedade:', error)
+      return () => {} // Return vazio para cleanup
     }
   }, [])
 
