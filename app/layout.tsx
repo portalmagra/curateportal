@@ -1,6 +1,5 @@
 // CLAUDE: Layout principal - versão mais completa com CSS
 import './globals.css'
-import ConditionalFooter from './components/ConditionalFooter'
 
 export const metadata = {
   title: 'CuratePortal - AI-Powered Health Product Curation',
@@ -93,7 +92,6 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body>
         <main>{children}</main>
-        <ConditionalFooter />
       </body>
     </html>
   )
