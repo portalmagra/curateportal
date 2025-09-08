@@ -5,14 +5,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-type Language = 'pt' | 'es' | 'en'
+type Language = 'en' | 'es'
 
 interface HeaderProps {
   language?: Language
   onLanguageChange?: (lang: Language) => void
 }
 
-export default function Header({ language = 'pt', onLanguageChange }: HeaderProps) {
+export default function Header({ language = 'en', onLanguageChange }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const pathname = usePathname()
@@ -173,7 +173,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
               <span style={{ color: '#6b7280', fontSize: isMobile ? '0.8rem' : '0.9rem', fontWeight: 500 }}>Idioma:</span>
               <div style={{ display: 'flex', gap: isMobile ? '0.2rem' : '0.3rem' }}>
                 {[
-                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/analise' },
+                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/assessment' },
                   { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/es/analise' },
                   { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' }
                 ].map(lang => (
@@ -336,7 +336,7 @@ export default function Header({ language = 'pt', onLanguageChange }: HeaderProp
                 justifyContent: 'center'
               }}>
                 {[
-                  { code: 'pt' as const, flag: '🇧🇷', label: 'PT', href: '/analise' },
+                  { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/assessment' },
                   { code: 'es' as const, flag: '🇪🇸', label: 'ES', href: '/es/analise' },
                   { code: 'en' as const, flag: '🇺🇸', label: 'EN', href: '/en/analise' }
                 ].map(lang => (
