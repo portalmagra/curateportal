@@ -23,6 +23,19 @@ export default function PWAPage() {
   const [isInstalled, setIsInstalled] = useState(false)
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null)
 
+  // Helper function to get day title
+  const getDayTitle = (day: number, lang: string = 'en'): string => {
+    if (day <= 7) {
+      return lang === 'es' ? 'Preparación' : lang === 'pt' ? 'Preparação' : 'Preparation'
+    } else if (day <= 14) {
+      return lang === 'es' ? 'Implementación' : lang === 'pt' ? 'Implementação' : 'Implementation'
+    } else if (day <= 21) {
+      return lang === 'es' ? 'Optimización' : lang === 'pt' ? 'Otimização' : 'Optimization'
+    } else {
+      return lang === 'es' ? 'Consolidación' : lang === 'pt' ? 'Consolidação' : 'Consolidation'
+    }
+  }
+
   // Sample 30-day plan data
   const planData: DayPlan[] = Array.from({ length: 30 }, (_, i) => ({
     day: i + 1,
@@ -70,19 +83,7 @@ export default function PWAPage() {
       language === 'es' ? 'Omega-3 (noche)' :
       'Ômega-3 (noite)'
     ]
-  })
-
-  function getDayTitle(day: number, lang: string = 'en'): string {
-    if (day <= 7) {
-      return lang === 'es' ? 'Preparación' : lang === 'pt' ? 'Preparação' : 'Preparation'
-    } else if (day <= 14) {
-      return lang === 'es' ? 'Implementación' : lang === 'pt' ? 'Implementação' : 'Implementation'
-    } else if (day <= 21) {
-      return lang === 'es' ? 'Optimización' : lang === 'pt' ? 'Otimização' : 'Optimization'
-    } else {
-      return lang === 'es' ? 'Consolidación' : lang === 'pt' ? 'Consolidação' : 'Consolidation'
-    }
-  }
+  }))
 
   // PWA Installation
   useEffect(() => {
