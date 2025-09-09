@@ -121,19 +121,19 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
                 </button>
               </Link>
 
-              <Link href="/produtos" style={{ textDecoration: 'none' }}>
+              <Link href="/amazon" style={{ textDecoration: 'none' }}>
                 <button style={{
                   display: 'flex',
                   alignItems: 'center',
                   gap: isMobile ? '0.4rem' : '0.5rem',
                   padding: isMobile ? '0.5rem 1rem' : '0.6rem 1.2rem',
-                  background: isActivePage('/produtos') ? 'linear-gradient(135deg, #3b82f6, #1d4ed8)' : 'transparent',
-                  color: isActivePage('/produtos') ? 'white' : '#6b7280',
-                  border: isActivePage('/produtos') ? 'none' : '1px solid #e5e7eb',
+                  background: isActivePage('/amazon') ? 'linear-gradient(135deg, #3b82f6, #1d4ed8)' : 'transparent',
+                  color: isActivePage('/amazon') ? 'white' : '#6b7280',
+                  border: isActivePage('/amazon') ? 'none' : '1px solid #e5e7eb',
                   borderRadius: '20px',
                   cursor: 'pointer',
                   fontSize: isMobile ? '0.8rem' : '0.9rem',
-                  fontWeight: isActivePage('/produtos') ? 600 : 500,
+                  fontWeight: isActivePage('/amazon') ? 600 : 500,
                   transition: 'all 0.3s ease'
                 }}>
                   <span>🛍️</span>
@@ -272,7 +272,7 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
               </button>
             </Link>
 
-            <Link href="/produtos" style={{ textDecoration: 'none' }}>
+            <Link href="/amazon" style={{ textDecoration: 'none' }}>
               <button style={{
                 width: '100%',
                 display: 'flex',
@@ -280,13 +280,13 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
                 justifyContent: 'center',
                 gap: '0.5rem',
                 padding: '0.8rem',
-                background: isActivePage('/produtos') ? 'linear-gradient(135deg, #3b82f6, #1e40af)' : 'transparent',
-                color: isActivePage('/produtos') ? 'white' : '#6b7280',
-                border: isActivePage('/produtos') ? 'none' : '1px solid #e5e7eb',
+                background: isActivePage('/amazon') ? 'linear-gradient(135deg, #3b82f6, #1e40af)' : 'transparent',
+                color: isActivePage('/amazon') ? 'white' : '#6b7280',
+                border: isActivePage('/amazon') ? 'none' : '1px solid #e5e7eb',
                 borderRadius: '12px',
                 cursor: 'pointer',
                 fontSize: '1rem',
-                fontWeight: isActivePage('/produtos') ? 600 : 500
+                fontWeight: isActivePage('/amazon') ? 600 : 500
               }}>
                 <span>🛍️</span>
                 <span>Products</span>

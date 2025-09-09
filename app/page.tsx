@@ -318,7 +318,7 @@ export default function HomePage() {
               </Link>
 
               {/* 2. PRODUTOS - AZUL SUAVE */}
-              <Link href="/produtos" style={{ textDecoration: 'none' }}>
+              <Link href="/amazon" style={{ textDecoration: 'none' }}>
                 <div style={{
                   background: 'linear-gradient(135deg, #2563eb, #1e40af)',
                   borderRadius: '25px',
@@ -813,7 +813,7 @@ export default function HomePage() {
             </div>
             
             <div style={{ marginBottom: '1rem' }}>
-              <Link href="/produtos" style={{ textDecoration: 'none' }}>
+              <Link href="/amazon" style={{ textDecoration: 'none' }}>
                 <button style={{
                   display: 'inline-flex',
                   alignItems: 'center',
