@@ -314,6 +314,27 @@ export default function Header({ language = 'en', onLanguageChange }: HeaderProp
               </button>
             </Link>
 
+            <Link href="/pwa" style={{ textDecoration: 'none' }}>
+              <button style={{
+                width: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '0.5rem',
+                padding: '0.8rem',
+                background: isActivePage('/pwa') ? 'linear-gradient(135deg, #f97316, #ea580c)' : 'transparent',
+                color: isActivePage('/pwa') ? 'white' : '#6b7280',
+                border: isActivePage('/pwa') ? 'none' : '1px solid #e5e7eb',
+                borderRadius: '12px',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: isActivePage('/pwa') ? 600 : 500
+              }}>
+                <span>📱</span>
+                <span>My Plan</span>
+              </button>
+            </Link>
+
             {/* Idioma Mobile */}
             <div style={{
               display: 'flex',

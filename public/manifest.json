@@ -1,21 +1,27 @@
 {
-  "name": "CuratePortal",
+  "name": "CuratePortal - 30-Day Wellness Plan",
   "short_name": "CuratePortal",
-  "description": "AI-powered health product curation for Americans",
+  "description": "Your personalized 30-day wellness plan with daily guidance",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#22c55e",
+  "background_color": "#3b82f6",
+  "theme_color": "#f97316",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "categories": ["health", "lifestyle", "wellness"],
+  "lang": "en",
+  "dir": "ltr"
 }
