@@ -553,7 +553,9 @@ export default function ResultsPage() {
                   <div style={{ 
                     width: '100%', 
                     height: '120px', 
-                    background: product.image,
+                    backgroundImage: `url(${product.imageUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
                     borderRadius: '12px', 
                     marginBottom: '1rem',
                     display: 'flex',
@@ -561,9 +563,10 @@ export default function ResultsPage() {
                     justifyContent: 'center',
                     fontSize: '0.8rem',
                     color: 'white',
-                    fontWeight: 'bold'
+                    fontWeight: 'bold',
+                    textShadow: '0 2px 4px rgba(0,0,0,0.5)'
                   }}>
-                    {product.name.split(' ')[0]}
+                    {product.imageUrl ? '' : product.name.split(' ')[0]}
                   </div>
                   
                   <h3 style={{ fontSize: '1.1rem', marginBottom: '0.5rem', color: '#1f2937', fontWeight: '600' }}>

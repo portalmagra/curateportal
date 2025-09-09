@@ -28,7 +28,7 @@ export function generateAmazonSearchUrls(queries: string[]): AmazonProduct[] {
     asin: `SEARCH${index}`,
     price: 'View prices',
     rating: 0,
-    imageUrl: '',
+    imageUrl: `https://via.placeholder.com/200x200/3b82f6/ffffff?text=${encodeURIComponent(query.split(' ')[0])}`,
     detailPageURL: `https://www.amazon.com/s?k=${encodeURIComponent(query + ' supplement')}&tag=${ASSOCIATE_TAG}`,
     isValid: true,
     isBestSeller: false,
